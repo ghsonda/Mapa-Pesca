@@ -20,6 +20,14 @@ marcadores.push(
 );
 
 marcadores.push(
+  L.marker([-26.4171428, -48.5963169])
+    .addTo(map)
+    .bindPopup("<b>Pesca de Caceio - Praia do Ervino</b><br>Na Praia do Ervino, a pesca artesanal é vivida de duas formas que unem gerações e mantêm viva a tradição.
+
+O caceio acontece quando a rede é lançada mais ao fundo, enquanto na beira seguimos a corda, caminhando na direção em que o mar nos empurra. Entre uma puxada e outra, há tempo para rir, conversar e compartilhar histórias. É um jeito de pescar que representa união, saúde e alegria, ensinando desde cedo que a pesca é também cultura, memória e herança.")
+);
+
+marcadores.push(
   L.marker([-26.228, -48.645])
     .addTo(map)
     .bindPopup("<b>Comunidade de Pescadores - Vila da Glória</b><br>Pesca de camarão e peixe.")
