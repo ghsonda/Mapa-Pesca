@@ -30,4 +30,22 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
+// Guarda os marcadores em um array
+const marcadores = [];
 
+// Criando um marcador
+marcadores.push(
+  L.marker([-26.249, -48.633])
+    .addTo(map)
+    .bindPopup("Enseada")
+);
+
+marcadores.push(
+  L.marker([-26.228, -48.645])
+    .addTo(map)
+    .bindPopup("Vila da Glória")
+);
+
+// Depois que todos os marcadores foram adicionados:
+const grupo = L.featureGroup(marcadores);
+map.fitBounds(grupo.getBounds(), { padding: [30, 30] });
