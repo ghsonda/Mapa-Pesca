@@ -16,21 +16,22 @@ h1 {
   margin: 0;
 }
 
-/* Centraliza o mapa e limita o tamanho */
+/* Centraliza o mapa */
 .map-container {
   display: flex;
   justify-content: center;
   margin: 20px 0;
 }
 
+/* Caixa do mapa */
 #map {
-  width: 600px;   /* largura fixa */
-  height: 400px;  /* altura fixa */
+  width: 600px;
+  height: 400px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Área de texto abaixo do mapa */
+/* Área de texto */
 .info {
   max-width: 700px;
   margin: 20px auto;
