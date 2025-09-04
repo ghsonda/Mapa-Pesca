@@ -20,7 +20,7 @@ let zoomInicial;
 if (window.innerWidth < 768) {
   zoomInicial = 14;  // para celular
 } else {
-  zoomInicial = 50;  // para PC
+  zoomInicial = 12;  // para PC
 }
 
 var map = L.map('map').setView([-26.243, -48.634], zoomInicial);
@@ -29,4 +29,5 @@ var map = L.map('map').setView([-26.243, -48.634], zoomInicial);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
+
 
