@@ -1,16 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mapa das Comunidades de Pescadores</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Link para o Leaflet -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
-  <h1>Comunidades de Pescadores - São Francisco do Sul (SC)</h1>
-  <div id="map"></div>
+  <header>
+    <h1>Comunidades de Pescadores - São Francisco do Sul (SC)</h1>
+  </header>
+
+  <main>
+    <!-- Aqui vai o mapa -->
+    <div class="map-container">
+      <div id="map"></div>
+    </div>
+
+    <!-- Aqui vai o conteúdo extra -->
+    <section class="info">
+      <h2>Por que preservar a pesca artesanal?</h2>
+      <p>
+        A pesca artesanal é uma prática tradicional que mantém o sustento de muitas famílias
+        e ajuda a conservar o equilíbrio dos ecossistemas marinhos. Ela promove o consumo
+        sustentável, valoriza a cultura local e protege espécies contra a pesca predatória.
+      </p>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
