@@ -33,15 +33,23 @@ marcadores.push(
     .addTo(map)
     .bindPopup(`
       <b>Pesca de Caceio - Praia do Ervino</b><br>
-      Na Praia do Ervino, a pesca artesanal é vivida de duas formas...
+      Na Praia do Ervino, a pesca artesanal é vivida de duas formas que unem gerações e mantêm viva a tradição.<br><br>
+      O caceio acontece quando a rede é lançada mais ao fundo, enquanto na beira seguimos a corda, caminhando na direção em que o mar nos empurra. 
+      Entre uma puxada e outra, há tempo para rir, conversar e compartilhar histórias. 
+      É um jeito de pescar que representa união, saúde e alegria, ensinando desde cedo que a pesca é também cultura, memória e herança.
     `)
-);
-
+    ),
 // marcador com outro ícone (exemplo)
 marcadores.push(
   L.marker([-26.3710677, -48.5721821], { icon: iconeTainha })
     .addTo(map)
-    .bindPopup("<b>Vai e Vem</b><br>Já o vai e vem começa com ...")
+      .bindPopup(`
+      <b>Vai e Vem</b><br>
+      Já o vai e vem começa com um peso de cerca de 300 quilos colocado no fundo do mar. Esse peso, junto de uma boia e uma roldana, guia a corda: de um lado está a rede, do outro o vazio. 
+      Seis ou sete pessoas puxam juntas, num movimento contínuo — um lado trazendo a rede para a beira, o outro levando-a de volta ao fundo. 
+      Esse ritmo de esforço coletivo se mistura com risadas, conversas e o companheirismo que transformam a pesca em encontro e celebração. 
+      São momentos de convivência e de partilha que atravessam gerações, preservando a identidade e fortalecendo os laços da comunidade.
+    `)
 );
 
 // ajusta a vista para todos os marcadores
