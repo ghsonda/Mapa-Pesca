@@ -6,14 +6,14 @@ var map = L.map('map').setView([-26.243, -48.634], zoomInicial);
 
 // ícones personalizados 
 const iconeCamarao = L.icon({
-  iconUrl: 'https://github.com/ghsonda/Mapa-Pesca/raw/main/camarao.png',
+  iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/camarao.png',
   iconSize: [40, 40],
   iconAnchor: [20, 40],
   popupAnchor: [0, -36]
 });
 
 const iconeTainha = L.icon({
-  iconUrl: 'https://github.com/ghsonda/Mapa-Pesca/raw/main/tainha.png',
+  iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/tainha.png',
   iconSize: [40, 40],
   iconAnchor: [20, 40],
   popupAnchor: [0, -36]
@@ -60,6 +60,7 @@ map.fitBounds(grupo.getBounds(), { padding: [30, 30] });
 setTimeout(() => {
   map.invalidateSize();
 }, 100);
+
 
 
 
