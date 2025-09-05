@@ -12,7 +12,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // Lista de marcadores
 const marcadores = [];
 
-// Exemplo de comunidades
+*// Exemplo de comunidades
 marcadores.push(
   L.marker([-26.249, -48.633])
     .addTo(map)
@@ -29,12 +29,6 @@ marcadores.push(
   Entre uma puxada e outra, há tempo para rir, conversar e compartilhar histórias. 
   É um jeito de pescar que representa união, saúde e alegria, ensinando desde cedo que a pesca é também cultura, memória e herança.
 `)
-);
-
-marcadores.push(
-  L.marker([-26.228, -48.645])
-    .addTo(map)
-    .bindPopup("<b>Comunidade de Pescadores - Vila da Glória</b><br>Pesca de camarão e peixe.")
 );
 
 marcadores.push(
