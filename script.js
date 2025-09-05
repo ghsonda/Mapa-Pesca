@@ -70,6 +70,39 @@ setTimeout(() => {
   map.invalidateSize();
 }, 100);
 
+// === LEGENDA LATERAL ===
+const legenda = L.control({ position: "topleft" });
+
+legenda.onAdd = function () {
+  const div = L.DomUtil.create("div", "map-legend");
+
+  // conteúdo da legenda
+  div.innerHTML = `
+    <h3>Comunidades</h3>
+    <div class="legend-item" id="ervino">
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/camarao.png" 
+           alt="Caceio" class="legend-icon">
+      <span>Praia do Ervino - Pesca de Caceio</span>
+    </div>
+  `;
+
+  return div;
+};
+
+legenda.addTo(map);
+
+// === EVENTO DE CLIQUE NA LEGENDA ===
+document.addEventListener("DOMContentLoaded", () => {
+  const ervinoItem = document.getElementById("ervino");
+  if (ervinoItem) {
+    ervinoItem.addEventListener("click", () => {
+      map.flyTo([-26.4171428, -48.5963169], 15, {
+        duration: 2 // animação suave
+      });
+    });
+  }
+});
+
 
 
 
