@@ -37,6 +37,12 @@ marcadores.push(
     .bindPopup("<b>Comunidade de Pescadores - Vila da Glória</b><br>Pesca de camarão e peixe.")
 );
 
+marcadores.push(
+  L.marker([26.3724494, -48.57263240])
+    .addTo(map)
+    .bindPopup("<b>Vai e Vem</b><br>Já o vai e vem começa com um peso de cerca de 300 quilos colocado no fundo do mar. Esse peso, junto de uma boia e uma roldana, guia a corda: de um lado está a rede, do outro o vazio. Seis ou sete pessoas puxam juntas, num movimento contínuo — um lado trazendo a rede para a beira, o outro levando-a de volta ao fundo. Esse ritmo de esforço coletivo se mistura com risadas, conversas e o companheirismo que transformam a pesca em encontro e celebração. são momentos de convivência e de partilha que atravessam gerações, preservando a identidade e fortalecendo os laços da comunidade.")
+);
+
 // Ajusta o mapa para mostrar todos os marcadores
 const grupo = L.featureGroup(marcadores);
 map.fitBounds(grupo.getBounds(), { padding: [30, 30] });
