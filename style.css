@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+header {
+  background: #004d40;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Centraliza o mapa */
+.map-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Caixa do mapa */
+#map {
+  width: 100%;
+  max-width: 600px; /* no PC continua limitado */
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Área de texto */
+.info {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
