@@ -12,12 +12,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // Lista de marcadores
 const marcadores = [];
 
-*// Exemplo de comunidades
+/ Exemplo de comunidades
 marcadores.push(
   L.marker([-26.249, -48.633])
     .addTo(map)
     .bindPopup("<b>Comunidade de Pescadores - Enseada</b><br>Pesca artesanal e turismo.")
-);
+);/
 
 marcadores.push(
   L.marker([-26.4171428, -48.5963169])
