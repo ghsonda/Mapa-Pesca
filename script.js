@@ -4,6 +4,13 @@ let zoomInicial = (window.innerWidth < 768) ? 14 : 12;
 // Criar o mapa
 var map = L.map('map').setView([-26.243, -48.634], zoomInicial);
 
+const iconeCamarao = L.icon({
+  iconUrl: 'img/camarao.jpeg',
+  iconSize: [40,40],
+  iconAnchor: [20,40],
+  popupAnchor: [0,-40]
+});
+
 // Adicionar camada do OpenStreetMap
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
@@ -21,7 +28,7 @@ marcadores.push(
 */
 
 marcadores.push(
-  L.marker([-26.4171428, -48.5963169])
+  L.marker([-26.4171428, -48.5963169], { incon: iconeCamarao })
     .addTo(map)
     .bindPopup(`
   <b>Pesca de Caceio - Praia do Ervino</b><br>
