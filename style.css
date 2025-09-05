@@ -12,8 +12,21 @@ header {
   padding: 20px;
 }
 
-h1 {
+/* Título principal */
+header h1 {
   margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Subtítulo */
+header .subtitle {
+  margin: 5px 0 0 0;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #cce5d0; /* tom mais claro */
 }
 
 /* Centraliza o mapa */
