@@ -4,7 +4,7 @@ let zoomInicial = (window.innerWidth < 768) ? 14 : 12;
 // cria o mapa (uma vez)
 var map = L.map('map').setView([-26.243, -48.634], zoomInicial);
 
-// ícones personalizados (recomendo PNG transparente)
+// ícones personalizados 
 const iconeCamarao = L.icon({
   iconUrl: 'https://github.com/ghsonda/Mapa-Pesca/raw/main/camarao.png',
   iconSize: [40, 40],
@@ -13,7 +13,7 @@ const iconeCamarao = L.icon({
 });
 
 const iconeTainha = L.icon({
-  iconUrl: 'https://github.com/ghsonda/Mapa-Pesca/raw/main/camarao.png',
+  iconUrl: 'https://github.com/ghsonda/Mapa-Pesca/raw/main/tainha.png',
   iconSize: [40, 40],
   iconAnchor: [20, 40],
   popupAnchor: [0, -36]
@@ -39,7 +39,7 @@ marcadores.push(
       É um jeito de pescar que representa união, saúde e alegria, ensinando desde cedo que a pesca é também cultura, memória e herança.
     `)
     ),
-// marcador com outro ícone (exemplo)
+  
 marcadores.push(
   L.marker([-26.3710677, -48.5721821], { icon: iconeTainha })
     .addTo(map)
@@ -60,5 +60,6 @@ map.fitBounds(grupo.getBounds(), { padding: [30, 30] });
 setTimeout(() => {
   map.invalidateSize();
 }, 100);
+
 
 
