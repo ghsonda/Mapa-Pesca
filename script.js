@@ -33,6 +33,9 @@ marcadores.push(
     .addTo(map)
     .bindPopup(`
       <b>Pesca de Caceio - Praia do Ervino</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/caceio-ilustracao.png" 
+           alt="Ilustração Caceio" 
+           style="width:200px; display:block; margin:10px auto;"><br>
       Na Praia do Ervino, a pesca artesanal é vivida de duas formas que unem gerações e mantêm viva a tradição.<br><br>
       O caceio acontece quando a rede é lançada mais ao fundo, enquanto na beira seguimos a corda, caminhando na direção em que o mar nos empurra. 
       Entre uma puxada e outra, há tempo para rir, conversar e compartilhar histórias. 
