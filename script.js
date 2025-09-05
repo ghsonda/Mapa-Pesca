@@ -38,7 +38,7 @@ marcadores.push(
       Entre uma puxada e outra, há tempo para rir, conversar e compartilhar histórias. 
       É um jeito de pescar que representa união, saúde e alegria, ensinando desde cedo que a pesca é também cultura, memória e herança.
     `)
-    ),
+);
   
 marcadores.push(
   L.marker([-26.3710677, -48.5721821], { icon: iconeTainha })
@@ -60,6 +60,7 @@ map.fitBounds(grupo.getBounds(), { padding: [30, 30] });
 setTimeout(() => {
   map.invalidateSize();
 }, 100);
+
 
 
 
