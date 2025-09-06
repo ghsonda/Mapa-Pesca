@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mapa das Comunidades de Pescadores</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- leaflet css -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
   <header>
-  <h1>PESCANDO CONHECIMENTO:</h1>
-  <p class="subtitle">Da rede à pesca, da tradição ao conhecimento</p>
-</header>
+    <h1>PESCANDO CONHECIMENTO:</h1>
+    <p class="subtitle">Da rede à pesca, da tradição ao conhecimento</p>
+  </header>
 
   <main>
-  <!-- Lateral esquerda -->
-  <aside class="sidebar">
-    <h3>Comunidades</h3>
-    <div class="legend-item" id="ervino">
-      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/camarao.png" 
-           alt="Caceio" class="legend-icon">
-      <span>Praia do Ervino - Pesca de Caceio</span>
+    <!-- Lateral esquerda (LEGEND) -->
+    <aside class="sidebar" aria-label="Legendas das comunidades">
+      <h3>Comunidades</h3>
+
+      <div class="legend-item" id="ervino" role="button" tabindex="0" aria-pressed="false">
+        <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/camarao.png"
+             alt="Ícone caceio" class="legend-icon">
+        <div class="legend-text">
+          <strong>Praia do Ervino</strong><br>
+          <span class="muted">Pesca de Caceio</span>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- área principal: mapa + texto -->
+    <div class="content">
+      <div class="map-container">
+        <div id="map" aria-label="Mapa das comunidades"></div>
+      </div>
+
+      <section class="info" aria-labelledby="whyTitle">
+        <h2 id="whyTitle">Por que preservar a pesca artesanal?</h2>
+        <p>
+          A pesca artesanal é uma prática tradicional que mantém o sustento de muitas famílias
+          e ajuda a conservar o equilíbrio dos ecossistemas marinhos. Ela promove o consumo
+          sustentável, valoriza a cultura local e protege espécies contra a pesca predatória.
+        </p>
+      </section>
     </div>
-  </aside>
+  </main>
 
-  <!-- Mapa centralizado -->
-  <div class="map-container">
-    <div id="map"></div>
-  </div>
-
-  <!-- Texto explicativo -->
-  <section class="info">
-    <h2>Por que preservar a pesca artesanal?</h2>
-    <p>
-      A pesca artesanal é uma prática tradicional que mantém o sustento de muitas famílias
-      e ajuda a conservar o equilíbrio dos ecossistemas marinhos. Ela promove o consumo
-      sustentável, valoriza a cultura local e protege espécies contra a pesca predatória.
-    </p>
-  </section>
-</main>
-
-
+  <!-- leaflet +  script -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
-
-
