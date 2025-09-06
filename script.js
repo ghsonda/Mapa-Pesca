@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       O caceio acontece quando a rede é lançada mais ao fundo, enquanto na beira seguimos a corda, caminhando na direção em que o mar nos empurra. 
       Entre uma puxada e outra, há tempo para rir, conversar e compartilhar histórias. 
       É um jeito de pescar que representa união, saúde e alegria, ensinando desde cedo que a pesca é também cultura, memória e herança.
-    ` { waxWidth: 400, minWidth: 300 });
+    ` { maxWidth: 400, minWidth: 300 });
 
   // --- Marcador Vai e Vem (tainha) ---
   markers['vaievem'] = L.marker([-26.3710677, -48.5721821], { icon: iconeTainha })
