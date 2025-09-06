@@ -3,63 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mapa das Comunidades de Pesca</title>
+  <title>Mapa das Comunidades de Pescadores</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 </head>
 <body>
   <header>
     <h1>PESCANDO CONHECIMENTO:</h1>
-    <p>Da rede à pesca, da tradição ao conhecimento</p>
+    <p class="subtitle">Da rede à pesca, da tradição ao conhecimento</p>
   </header>
 
-  <div class="main-container">
-    <!-- Legenda -->
-    <div class="legend">
+  <main>
+    <!-- Lateral esquerda -->
+    <aside class="sidebar">
       <h3>Comunidades</h3>
-      <p><b>Praia do Ervino</b><br> Pesca de Caceio</p>
-    </div>
+      <div class="legend-item" id="ervino">
+        <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/camarao.png" 
+             alt="Caceio" class="legend-icon">
+        <div>
+          <strong>Praia do Ervino</strong><br>
+          <span>Pesca de Caceio</span>
+        </div>
+      </div>
+    </aside>
 
-    <!-- Mapa + Texto -->
-    <div class="map-text-container">
-      <div id="map"></div>
+    <!-- Conteúdo principal -->
+    <section class="content">
+      <!-- Mapa centralizado -->
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
 
-      <div class="info-box">
-        <h3>Por que preservar a pesca artesanal?</h3>
+      <!-- Texto explicativo -->
+      <section class="info">
+        <h2>Por que preservar a pesca artesanal?</h2>
         <p>
           A pesca artesanal é uma prática tradicional que mantém o sustento de muitas famílias
           e ajuda a conservar o equilíbrio dos ecossistemas marinhos. Ela promove o consumo
           sustentável, valoriza a cultura local e protege espécies contra a pesca predatória.
         </p>
-      </div>
-    </div>
-  </div>
+      </section>
+    </section>
+  </main>
 
-  <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script>
-    // zoom inicial (pc / mobile)
-    let zoomInicial = (window.innerWidth < 768) ? 14 : 12;
-
-    // cria o mapa (uma vez)
-    var map = L.map('map').setView([-26.243, -48.634], zoomInicial);
-
-    // camada base
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
-
-    // ícone personalizado
-    const iconeCaceio = L.icon({
-      iconUrl: 'https://github.com/ghsonda/Mapa-Pesca/raw/main/caceio.png',
-      iconSize: [40, 40]
-    });
-
-    // marcador
-    L.marker([-26.3710677, -48.5721821], { icon: iconeCaceio })
-      .addTo(map)
-      .bindPopup("<b>Praia do Ervino</b><br>Pesca de Caceio");
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
