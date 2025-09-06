@@ -76,14 +76,11 @@ window.addEventListener('resize', () => refreshMapSize(100));
 // --- evento da legenda (Ervino) ---
 const ervinoItem = document.getElementById('ervino');
 if (ervinoItem) {
-  function goToErvino() {
-    const latlng = [-26.4171428, -48.5963169];
-    map.flyTo(latlng, 15, { duration: 1.1 });
-    // abrir popup quando o mapa terminar de voar (ou com pequeno atraso)
-    setTimeout(() => {
-      markers['ervino'].openPopup();
-    }, 1200);
-  }
+  ervinoItem.addEventListener('click', () => {
+    map.flyTo([-26.4171428, -48.5963169], 15, { duration: 1.1 });
+    setTimeout(() => markers['ervino'].openPopup(), 1200);
+  });
+}
 
   // clique com mouse
   ervinoItem.addEventListener('click', goToErvino);
@@ -96,3 +93,4 @@ if (ervinoItem) {
     }
   });
 }
+
