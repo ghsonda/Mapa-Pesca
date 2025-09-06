@@ -1,3 +1,4 @@
+
 /* Reset / base */
 * { box-sizing: border-box; }
 body {
@@ -92,16 +93,3 @@ main {
   .sidebar { width:200px; padding:12px; }
 }
 
-/* Força o texto a quebrar normalmente e evitar "..." */
-.leaflet-popup-content {
-  white-space: normal !important;
-  overflow: visible !important;
-  word-break: break-word;
-}
-
-.leaflet-popup-content img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 10px auto;
-}
