@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   // --- Configuração inicial (zoom mobile/desktop) ---
   const zoomInicial = (window.innerWidth < 768) ? 14 : 12;
@@ -70,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Forçar redraw após carregamento ---
-  setTimeout(() => map.invalidateSize(), 250);
+  setTimeout(() => map.invalidateSize(), 400);
 
   // --- Função utilitária para voar e abrir popup ---
   function goTo(key, latlng, zoom = 15) {
