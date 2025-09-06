@@ -96,12 +96,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const ervinoItem = document.getElementById("ervino");
   if (ervinoItem) {
     ervinoItem.addEventListener("click", () => {
-      map.flyTo([-26.4171428, -48.5963169], 15, {
-        duration: 2 // animação suave
-      });
+      map.flyTo([-26.4171428, -48.5963169], 15, { duration: 2 });
     });
   }
 });
+
+
 
 
 
