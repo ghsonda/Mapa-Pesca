@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mapa das Comunidades de Pescadores</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
@@ -14,22 +14,19 @@
   </header>
 
   <main>
-    <!-- Sidebar (legenda) -->
     <aside class="sidebar">
       <h3>Comunidades</h3>
 
-      <div class="legend-item" id="ervino">
-        <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/camarao.png" 
-             alt="Caceio" class="legend-icon">
+      <div class="legend-item" id="ervino" tabindex="0" role="button" aria-pressed="false">
+        <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/camarao.png" alt="Caceio" class="legend-icon">
         <div>
           <strong>Praia do Ervino</strong><br>
           <span>Pesca de Caceio</span>
         </div>
       </div>
 
-      <div class="legend-item" id="vaievem">
-        <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/tainha.png" 
-             alt="Vai e Vem" class="legend-icon">
+      <div class="legend-item" id="vaievem" tabindex="0" role="button" aria-pressed="false">
+        <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/tainha.png" alt="Vai e Vem" class="legend-icon">
         <div>
           <strong>Vai e Vem</strong><br>
           <span>Pesca da Tainha</span>
@@ -37,14 +34,11 @@
       </div>
     </aside>
 
-    <!-- Conteúdo principal -->
     <section class="content">
-      <!-- Mapa -->
       <div class="map-container">
         <div id="map"></div>
       </div>
 
-      <!-- Texto explicativo -->
       <section class="info">
         <h2>Por que preservar a pesca artesanal?</h2>
         <p>
