@@ -94,3 +94,16 @@ if (ervinoItem) {
   });
 }
 
+// garantir que o mapa apareça em todas as telas
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    map.invalidateSize();
+  }, 300);
+});
+
+window.addEventListener("resize", () => {
+  setTimeout(() => {
+    map.invalidateSize();
+  }, 300);
+});
+
