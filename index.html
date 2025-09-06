@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -14,8 +13,26 @@
     <p class="subtitle">Da rede à pesca, da tradição ao conhecimento</p>
   </header>
 
-  <main>
-    <aside class="sidebar">
+  <!-- wrapper central que fixa a largura e serve de referência para posicionar a sidebar -->
+  <main class="page-wrapper">
+    <!-- coluna central (mapa + info) fica sempre centralizada no wrapper -->
+    <div class="center-column">
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
+
+      <section class="info">
+        <h2>Por que preservar a pesca artesanal?</h2>
+        <p>
+          A pesca artesanal é uma prática tradicional que mantém o sustento de muitas famílias
+          e ajuda a conservar o equilíbrio dos ecossistemas marinhos. Ela promove o consumo
+          sustentável, valoriza a cultura local e protege espécies contra a pesca predatória.
+        </p>
+      </section>
+    </div>
+
+    <!-- sidebar permanece no DOM do wrapper, mas é posicionada absolutamente à esquerda do centro -->
+    <aside class="sidebar" aria-label="Legenda / Comunidades">
       <h3>Comunidades Ervino</h3>
 
       <div class="legend-item" id="ervino" tabindex="0" role="button" aria-pressed="false">
@@ -34,21 +51,6 @@
         </div>
       </div>
     </aside>
-
-    <section class="content">
-      <div class="map-container">
-        <div id="map"></div>
-      </div>
-
-      <section class="info">
-        <h2>Por que preservar a pesca artesanal?</h2>
-        <p>
-          A pesca artesanal é uma prática tradicional que mantém o sustento de muitas famílias
-          e ajuda a conservar o equilíbrio dos ecossistemas marinhos. Ela promove o consumo
-          sustentável, valoriza a cultura local e protege espécies contra a pesca predatória.
-        </p>
-      </section>
-    </section>
   </main>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
