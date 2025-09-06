@@ -70,17 +70,6 @@ header .subtitle { margin-top:6px; color:#cce5d0; font-weight:300; }
   border-radius:12px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.12);
 }
-
-.secao {
-  width:100%;
-  max-width:700px;
-  margin: 20px auto 0;
-  padding: 18px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
-  text-align: left;
-}
 .info h2 { margin-top:0; font-size:1.2rem; color:#222; }
 .info p { color: #333; line-height:1.5; }
 
@@ -101,9 +90,10 @@ header .subtitle { margin-top:6px; color:#cce5d0; font-weight:300; }
 
 /* Seções */
 .secao {
-  max-width: 1000px;
+  max-width: 1200px; /* mais largo */
+  width: 90%;        /* ocupa 90% da tela */
   margin: 50px auto;
-  padding: 30px;
+  padding: 40px;     /* aumenta o espaço interno */
   background: white;
   border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
