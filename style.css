@@ -5,7 +5,6 @@ body {
   background: #f5f5f5;
 }
 
-/* Cabeçalho */
 header {
   background: #004d40;
   color: white;
@@ -13,58 +12,94 @@ header {
   text-align: center;
 }
 
+/* Título */
 header h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-header p {
-  margin: 5px 0 0;
-  font-size: 16px;
+header .subtitle {
+  margin: 5px 0 0 0;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #cce5d0;
 }
 
 /* Layout principal */
-.main-container {
-  display: grid;
-  grid-template-columns: 300px 1fr; /* legenda fixa + mapa/texto */
+main {
+  display: flex;
   gap: 20px;
+  padding: 20px;
   justify-content: center;
-  align-items: flex-start;
-  margin-top: 20px;
 }
 
-/* Legenda lateral */
-.legend {
+/* Sidebar */
+.sidebar {
+  width: 220px;
   background: white;
   padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 250px;
-  margin-left: -30px; /* puxa mais pra esquerda */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  text-align: left;
+  flex-shrink: 0;
 }
 
-/* Mapa + texto */
-.map-text-container {
+.legend-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.legend-item:hover {
+  background: #f0f0f0;
+}
+
+.legend-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+/* Área principal (mapa + texto) */
+.content {
+  flex: 1;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
 }
 
-/* Estilo do mapa */
+/* Mapa centralizado */
+.map-container {
+  width: 100%;
+  max-width: 700px;
+}
+
 #map {
-  width: 650px;   /* mapa maior */
-  height: 500px;
+  width: 100%;
+  height: 450px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Caixa do texto */
-.info-box {
-  background: white;
+/* Texto explicativo */
+.info {
+  max-width: 700px;
+  margin-top: 20px;
   padding: 20px;
+  background: white;
   border-radius: 12px;
-  max-width: 650px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: justify;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  text-align: left;
+}
+
+.info h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #333;
 }
