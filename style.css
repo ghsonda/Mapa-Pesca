@@ -44,8 +44,8 @@ header .subtitle { margin-top:6px; color:#cce5d0; font-weight:300; }
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.12);
   text-align: left;
-  position: absolute;     /* tiramos do fluxo para não deslocar o centro */
-  left: -260px;           /* deslocamento para a esquerda do wrapper (ajuste aqui se quiser mais/menos) */
+  position: absolute;     /* não deslocar o centro */
+  left: -260px;           /* deslocamento para a esquerda do mapa */
   top: 6px;
 }
 .legend-item {
@@ -73,17 +73,27 @@ header .subtitle { margin-top:6px; color:#cce5d0; font-weight:300; }
 
 /* Texto explicativo */
 .info {
-  width:100%;
-  max-width:700px;
-  margin: 20px auto 0;
-  padding: 18px;
+  width: 330px;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.12);
   text-align: left;
+  position: absolute; 
+  right: -260px;           /* deslocamento para a direita do mapa */
+  top: 6px;
 }
-.info h2 { margin-top:0; font-size:1.2rem; color:#222; }
-.info p { color: #333; line-height:1.5; }
+
+.info h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.info p {
+  color: #333;
+  line-height: 1.5;
+}
 
 /* responsividade: em telas pequenas mostramos a legenda acima do conteúdo e usamos posicionamento normal */
 @media (max-width: 920px) {
