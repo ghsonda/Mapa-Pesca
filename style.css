@@ -169,3 +169,25 @@ header .subtitle { margin-top:6px; color:#cce5d0; font-weight:300; }
   color: #004d40;
 }
 
+/* responsividade: em telas pequenas mostramos legenda e info empilhadas */
+@media (max-width: 920px) {
+  .page-wrapper { 
+    max-width: 94%; 
+    padding-left: 12px; 
+    padding-right: 12px; 
+  }
+
+  .center-column { 
+    width: 100%; 
+  }
+
+  .sidebar,
+  .info {
+    position: static;   /* volta ao fluxo normal */
+    width: 100%;        /* ocupa largura total */
+    margin: 0 0 14px 0; /* separação vertical */
+  }
+
+  header h1 { font-size:1.6rem; }
+  #map { height: 320px; min-height: 280px; }
+}
