@@ -125,6 +125,17 @@ const iconeBaiacu = L.icon({
     });
   }
 
+const trapicheItem = document.getElementById('trapiche');
+if (trapicheItem) {
+  trapicheItem.addEventListener('click', () => goTo('trapiche', [-26.2286383, -48.6138572]));
+  trapicheItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('trapiche', [-26.2286383, -48.6138572]); 
+    }
+  });
+}
+
   // --- Reaplica invalidateSize quando redimensionam a tela ---
   let resizeTimeout;
   window.addEventListener('resize', () => {
