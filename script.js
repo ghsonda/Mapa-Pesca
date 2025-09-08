@@ -33,6 +33,13 @@ const iconeBaiacu = L.icon({
     popupAnchor: [0, -36]
   });
 
+const iconeRobalo = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/robalo.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -36]
+  });
+
   // --- Marcadores ---
   const markers = {};
 
@@ -71,6 +78,20 @@ const iconeBaiacu = L.icon({
       <b>Trapiche do Paulas</b><br>
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/trapiche.png" 
            alt="trapiche" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
+      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
+      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
+      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+    `);
+
+// Rancho de pesca Praia do lixo (Robalo)
+  markers['rancho'] = L.marker([-26.2634738, -48.6500801], { icon: iconeRobalo })
+    .addTo(map)
+    .bindPopup(`
+      <b>Rancho de Pesca</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/rancho.png" 
+           alt="rancho" 
            style="width:200px; display:block; margin:10px auto;"><br>
       No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
       Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
@@ -132,6 +153,17 @@ if (trapicheItem) {
     if (e.key === 'Enter' || e.key === ' ') { 
       e.preventDefault(); 
       goTo('trapiche', [-26.2286383, -48.6138572]); 
+    }
+  });
+}
+
+const ranchoItem = document.getElementById('rancho');
+if (ranchoItem) {
+  ranchoItem.addEventListener('click', () => goTo('rancho', [-26.2634738, -48.6500801]));
+  ranchoItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('rancho', [-26.2634738, -48.6500801]); 
     }
   });
 }
