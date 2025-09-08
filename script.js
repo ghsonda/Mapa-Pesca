@@ -26,6 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
     popupAnchor: [0, -36]
   });
 
+const iconeBaiacu = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/baiacu.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -36]
+  });
+
   // --- Marcadores ---
   const markers = {};
 
@@ -55,6 +62,20 @@ document.addEventListener('DOMContentLoaded', () => {
       Seis ou sete pessoas puxam juntas, num movimento contínuo — um lado trazendo a rede para a beira, o outro levando-a de volta ao fundo.
       Esse ritmo de esforço coletivo se mistura com risadas, conversas e o companheirismo que transformam a pesca em encontro e celebração.
       São momentos de convivência e de partilha que atravessam gerações, preservando a identidade e fortalecendo os laços da comunidade.
+    `);
+
+// Trapiche gentil emitério dos Santos (Baiacu)
+  markers['trapiche'] = L.marker([-26.2286383, -48.6138572], { icon: iconeBaiacu })
+    .addTo(map)
+    .bindPopup(`
+      <b>Trapice do Paulas</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/trapiche.png" 
+           alt="trapiche" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
+      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
+      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
+      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
     `);
 
   // --- Ajustar vista para mostrar todos os marcadores ---
