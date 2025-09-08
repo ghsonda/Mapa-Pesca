@@ -68,7 +68,7 @@ const iconeBaiacu = L.icon({
   markers['trapiche'] = L.marker([-26.2286383, -48.6138572], { icon: iconeBaiacu })
     .addTo(map)
     .bindPopup(`
-      <b>Trapice do Paulas</b><br>
+      <b>Trapiche do Paulas</b><br>
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/trapiche.png" 
            alt="trapiche" 
            style="width:200px; display:block; margin:10px auto;"><br>
