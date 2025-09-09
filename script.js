@@ -128,10 +128,10 @@ const iconeBagre = L.icon({
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/rancho.png" 
            alt="rancho" 
            style="width:200px; display:block; margin:10px auto;"><br>
-      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
-      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
-      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
-      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+      Na Praia do Lixo, a pesca artesanal resiste como herança viva das famílias que dela tiram sustento.
+      Entre barcos simples e redes estendidas à beira-mar, pescadores se reúnem em silêncio atento, acompanhando o movimento da maré.
+      É um espaço de trabalho e convivência, onde o saber tradicional passa de geração em geração. 
+      Ali, o mar não é apenas cenário, mas fonte de alimento, memória e identidade cultural que mantém viva a relação íntima entre comunidade e natureza.
     `);
 
 // Trapiche da Vila da Glória (Mariscos)
@@ -142,10 +142,9 @@ const iconeBagre = L.icon({
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/trapicheVG.png" 
            alt="trapicheVG" 
            style="width:200px; display:block; margin:10px auto;"><br>
-      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
-      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
-      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
-      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+      O Trapiche da Vila da Glória, em São Francisco do Sul, é muito mais que um ponto turístico: é também um espaço onde a pesca se mantém viva.
+      Entre o vai e vem das embarcações, moradores e visitantes lançam linhas e redes nas águas calmas da Baía da Babitonga, em busca de camarões, peixes e mariscos.
+      Ali, a tradição pesqueira se mistura à beleza do trapiche, proporcionando momentos de contemplação e conexão com a natureza, enquanto mantém viva a cultura local.
     `);
 
 // Praia do Mota (Camarão)
@@ -156,10 +155,10 @@ const iconeBagre = L.icon({
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/Mota.png" 
            alt="mota" 
            style="width:200px; display:block; margin:10px auto;"><br>
-      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
-      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
-      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
-      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+      Na Praia do Mota, em São Francisco do Sul, a pesca artesanal acontece em harmonia com o mar tranquilo da Baía da Babitonga.
+      Além da faixa de areia onde redes e tarrafas são lançadas, o trapiche se torna ponto de encontro para pescadores e moradores.
+      É dali que partem barcos simples, carregando histórias e retornando com peixes, camarões e mariscos que sustentam a comunidade.
+      O trapiche não é apenas estrutura de madeira sobre o mar: é espaço de trabalho, convivência e tradição, onde cada saída e cada chegada reafirma o vínculo entre a vida dos pescadores e a riqueza das águas.
     `);
 
 // Ubatuba (Tainha)
@@ -170,10 +169,9 @@ const iconeBagre = L.icon({
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/ubatuba.png" 
            alt="ubatuba" 
            style="width:200px; display:block; margin:10px auto;"><br>
-      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
-      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
-      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
-      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+      Em Ubatuba, a pesca é parte da rotina e da memória da comunidade.
+      Os pescadores saem em canoas ou barcos pequenos, lançando redes de emalhe e praticando o arrasto de praia.
+      A cada maré, o mar oferece tainha, parati, corvina e robalo, peixes que alimentam as famílias e mantêm viva a tradição passada de geração em geração.
     `);
 
 // Praia do Forte (Carapicu)
@@ -184,10 +182,10 @@ const iconeBagre = L.icon({
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/forte.png" 
            alt="forte" 
            style="width:200px; display:block; margin:10px auto;"><br>
-      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
-      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
-      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
-      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+      Na Praia do Forte, a pesca é mais que trabalho: é tradição que se desenrola a cada amanhecer.
+      Os pescadores lançam suas linhas e redes nas águas calmas da baía, esperando pacientemente pelos carapicus, robalos, corvinas e arraias que surgem entre as ondas.
+      Cada captura alimenta famílias e fortalece laços antigos, mantendo viva a memória de gerações que aprenderam a respeitar e ouvir o mar.
+      Ali, o ofício se mistura à poesia do cotidiano, e cada arremesso é um gesto de cuidado e conexão com a vida que pulsa sob a superfície.
     `);
 
 // Bairro Capri (Sardinha)
@@ -198,10 +196,12 @@ const iconeBagre = L.icon({
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/capri.png" 
            alt="capri" 
            style="width:200px; display:block; margin:10px auto;"><br>
-      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
-      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
-      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
-      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+      No bairro Capri, a pesca artesanal é mais do que uma atividade econômica — é tradição que se renova a cada amanhecer.
+      Os pescadores seguem para o mar com suas pequenas embarcações, redes e anzóis, guiados pelo ritmo das marés e pelo conhecimento passado de geração em geração.
+      O cheiro de maresia mistura-se ao som das ondas, enquanto o sol desponta no horizonte, pintando o céu de tons dourados.<br><br>
+      Peixes como tainha, robalo e sardinha são os mais comuns, capturados com paciência e habilidade, respeitando o ciclo natural da pesca.
+      Cada rede lançada é um gesto de cuidado, cada retorno à margem é celebrado com gratidão pelo sustento que o mar oferece.
+      No Capri, a pesca artesanal é vida, memória e cultura, entrelaçando a comunidade com o oceano que a cerca.
     `);
 
 // Iperoba (Tainha)
@@ -212,10 +212,12 @@ const iconeBagre = L.icon({
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/iperoba.png" 
            alt="iperoba" 
            style="width:200px; display:block; margin:10px auto;"><br>
-      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
-      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
-      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
-      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+      No Iperoba, a pesca artesanal é um espetáculo de tradição e paciência.
+      Os pescadores partem cedo, com suas pequenas embarcações ou diretamente da praia, usando técnicas que passam de geração em geração.
+      Com redes de emalhar, capturam peixes como tainha e robalo, permitindo que os cardumes sejam recolhidos com cuidado.
+      Anzóis são lançados com atenção, na expectativa de trazer a pesca do dia, enquanto a tarrafa se abre sobre a água como um leque, cobrindo a superfície e garantindo capturas variadas.<br><br>
+      Cada gesto é fruto de conhecimento profundo do mar e das marés.
+      No Iperoba, a pesca artesanal não é só sustento: é memória, identidade e poesia, mantendo viva a conexão entre as famílias e o oceano que as sustenta.
     `);
 
 // Manguezal do Iperoba (Caranguejo)
@@ -226,10 +228,10 @@ const iconeBagre = L.icon({
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/manguezal.png" 
            alt="manguezal" 
            style="width:200px; display:block; margin:10px auto;"><br>
-      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
-      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
-      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
-      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+      No manguezal do Iperoba, o caranguejo-uçá se esconde entre as raízes e túneis de lama, sendo uma das espécies mais valorizadas na pesca artesanal local.
+      Os pescadores coletam esses caranguejos à mão, aproveitando a maré baixa para entrar cuidadosamente no manguezal, ou usam ancinhos e redes pequenas para retirá-los sem prejudicar o habitat.<br><br>
+      A captura exige atenção: o caranguejo-uçá é rápido e ágil, fugindo para seus buracos quando sente perigo.
+      Essa prática não é apenas fonte de sustento, mas também preserva a tradição e o equilíbrio do manguezal, garantindo que a espécie continue abundante para futuras gerações.
     `);
 
 // Ribeira (Bagre)
@@ -240,10 +242,11 @@ const iconeBagre = L.icon({
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/ribeira.png" 
            alt="ribeira" 
            style="width:200px; display:block; margin:10px auto;"><br>
-      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
-      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
-      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
-      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+      Na Ribeira, a pesca acontece em águas calmas, onde a vida se mistura ao ritmo da maré.
+      O robalo, elegante e valorizado, surge entre os manguezais e rios, trazendo alegria a quem o captura.
+      O bagre, presente no fundo lodoso, garante alimento constante às famílias. O parati, pequeno e abundante, cai facilmente nas tarrafas, sempre bem-vindo à mesa.
+      Já o siri, vindo dos mangues, completa a fartura, apanhado em covos e servido em saborosas casquinhas.<br><br>
+      Cada captura guarda um pedaço da tradição da Ribeira: simples, generosa e marcada pelo encontro entre homem e natureza.
     `);
 
 // Canal do Linguado (Robalo)
@@ -254,10 +257,12 @@ const iconeBagre = L.icon({
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/canal.png" 
            alt="canal" 
            style="width:200px; display:block; margin:10px auto;"><br>
-      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
-      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
-      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
-      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+      No Canal do Linguado, a pesca artesanal é mais do que uma atividade econômica: é um modo de vida.
+      Os pescadores locais utilizam redes de espera, posicionadas em pontos estratégicos do canal, para capturar robalo e bagre, que se movimentam com a maré.
+      Em pequenos barcos, praticam o caceio, puxando a rede por trechos curtos, sempre em grupo, tornando a pesca um trabalho coletivo e divertido.<br><br>
+      Para espécies menores, como siri e camarão, são usadas armadilhas cuidadosamente colocadas no fundo do canal, garantindo que a captura seja seletiva e sustentável.
+      A pesca com anzol e linha, mais artesanal, é feita individualmente ou em família, muitas vezes à beira da água, aproveitando a tranquilidade do canal.
+      A pesca no Canal do Linguado combina técnica, paciência e tradição, mantendo viva a cultura local e a conexão das comunidades com o mar.
     `);
 
   // --- Ajustar vista para mostrar todos os marcadores ---
