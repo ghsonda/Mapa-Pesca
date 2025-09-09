@@ -89,11 +89,18 @@ const iconeAco = L.icon({
     popupAnchor: [0, -36]
   });
 
+const iconePampu = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/pampu.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -36]
+  });
+
   // --- Marcadores ---
   const markers = {};
 
   // Ervino (Caceio)
-  markers['ervino'] = L.marker([-26.4171428, -48.5963169], { icon: iconeCamarao })
+  markers['ervino'] = L.marker([-26.4171428, -48.5963169], { icon: iconePampu })
     .addTo(map)
     .bindPopup(`
       <b>Pesca de Caceio - Praia do Ervino</b><br>
