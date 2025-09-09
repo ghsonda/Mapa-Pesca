@@ -246,6 +246,20 @@ const iconeBagre = L.icon({
       Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
     `);
 
+// Canal do Linguado (Robalo)
+  markers['canal'] = L.marker([-26.4137465, -48.6167724], { icon: iconeRobalo })
+    .addTo(map)
+    .bindPopup(`
+     <b>Canal do Linguado</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/canal.png" 
+           alt="canal" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
+      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
+      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
+      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+    `);
+
   // --- Ajustar vista para mostrar todos os marcadores ---
   const grupo = L.featureGroup(Object.values(markers));
   try {
@@ -403,6 +417,18 @@ if (ribeiraItem) {
       e.preventDefault(); 
       goTo('ribeira',
 [-26.3380494, -48.6852590]);
+    }
+  });
+}
+
+const canalItem = document.getElementById('canal');
+if (canalItem) {
+  canalItem.addEventListener('click', () => goTo('canal', [-26.4137465, -48.6167724]));
+  canalItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('canal',
+[-26.4137465, -48.6167724]);
     }
   });
 }
