@@ -121,7 +121,7 @@ const iconeMarisco = L.icon({
     `);
 
 // Praia do Mota (Camarão)
-  markers['mota'] = L.marker([-26,2501244, -48,6426105], { icon: iconeCamarao })
+  markers['mota'] = L.marker([-26.2501244, -48.6426105], { icon: iconeCamarao })
     .addTo(map)
     .bindPopup(`
       <b>Praia do Mota</b><br>
@@ -216,11 +216,11 @@ if (trapicheVGItem) {
 
 const motaItem = document.getElementById('mota');
 if (motaItem) {
-  motaItem.addEventListener('click', () => goTo('mota', [-26,2501244, -48,6426105]));
+  motaItem.addEventListener('click', () => goTo('mota', [-26.2501244, -48.6426105]));
   motaItem.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') { 
       e.preventDefault(); 
-      goTo('mota', [-26,2501244, -48,6426105]); 
+      goTo('mota', [-26.2501244, -48.6426105]); 
     }
   });
 }
