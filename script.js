@@ -190,6 +190,20 @@ const iconeSardinha = L.icon({
       Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
     `);
 
+// Iperoba (Tainha)
+  markers['iperoba'] = L.marker([-26.2138372, -48.5692799], { icon: iconeTainha })
+    .addTo(map)
+    .bindPopup(`
+      <b>Iperoba</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/iperoba.png" 
+           alt="iperoba" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
+      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
+      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
+      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+    `);
+
   // --- Ajustar vista para mostrar todos os marcadores ---
   const grupo = L.featureGroup(Object.values(markers));
   try {
@@ -311,6 +325,18 @@ if (capriItem) {
       e.preventDefault(); 
       goTo('capri',
 [-26.1739446, -48.5600930]);
+    }
+  });
+}
+
+const iperobaItem = document.getElementById('iperoba');
+if (capriItem) {
+  iperobaItem.addEventListener('click', () => goTo('iperoba', [-26.2138372, -48.5692799]));
+  iperobaItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('iperoba',
+[-26.2138372, -48.5692799]);
     }
   });
 }
