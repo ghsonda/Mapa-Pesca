@@ -36,30 +36,69 @@ header .subtitle { margin-top:6px; color:#cce5d0; font-weight:300; }
   align-items: center;
 }
 
-/* Sidebar (legenda) - posicionada fora à esquerda do bloco central */
+/* Sidebar (legenda) */
 .sidebar {
-  width: 230px;
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.12);
-  text-align: left;
-  position: absolute;     /* não deslocar o centro */
-  left: -260px;           /* deslocamento para a esquerda do mapa */
+  width: 280px;
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  position: absolute;
+  left: -300px;
   top: 6px;
+  font-family: "Segoe UI", sans-serif;
 }
+
+.sidebar h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #004d40;
+  text-align: center;
+}
+
+/* Itens em grid 2 colunas */
+.sidebar .legend-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colunas */
+  gap: 10px;
+}
+
 .legend-item {
   display: flex;
-  gap:8px;
+  flex-direction: column;
   align-items: center;
+  gap: 4px;
   cursor: pointer;
-  margin: 8px 0;
-  padding: 6px;
-  border-radius: 8px;
-  transition: background .15s, transform .06s;
+  padding: 8px;
+  border-radius: 10px;
+  background: #fafafa;
+  border: 1px solid #eaeaea;
+  text-align: center;
+  transition: all 0.2s ease;
 }
-.legend-item:hover { background:#f0f0f0; transform: translateY(-1px); }
-.legend-icon { width:32px; height:32px; }
+
+.legend-item:hover {
+  background: #e0f2f1;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.legend-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.legend-text strong {
+  font-size: 0.8rem;
+  color: #004d40;
+}
+
+.legend-text span {
+  font-size: 0.7rem;
+  color: #555;
+}
+
 
 /* Mapa */
 .map-container { width:100%; max-width:700px; }
