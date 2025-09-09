@@ -215,9 +215,9 @@ if (trapicheVGItem) {
 }
 
 const motaItem = document.getElementById('mota');
-if (trapicheVGItem) {
-  trapicheVGItem.addEventListener('click', () => goTo('mota', [-26,2501244, -48,6426105]));
-  trapicheVGItem.addEventListener('keydown', (e) => {
+if (motaItem) {
+  motaItem.addEventListener('click', () => goTo('mota', [-26,2501244, -48,6426105]));
+  motaItem.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') { 
       e.preventDefault(); 
       goTo('mota', [-26,2501244, -48,6426105]); 
