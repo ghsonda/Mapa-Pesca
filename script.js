@@ -134,6 +134,20 @@ const iconeMarisco = L.icon({
       Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
     `);
 
+// Ubatuba (Tainha)
+  markers['ubatuba'] = L.marker([-26.2153298, -48.5225488], { icon: iconeTainha })
+    .addTo(map)
+    .bindPopup(`
+      <b>Ubatuba</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/ubatuba.png" 
+           alt="ubatuba" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
+      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
+      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
+      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+    `);
+
   // --- Ajustar vista para mostrar todos os marcadores ---
   const grupo = L.featureGroup(Object.values(markers));
   try {
@@ -221,6 +235,17 @@ if (motaItem) {
     if (e.key === 'Enter' || e.key === ' ') { 
       e.preventDefault(); 
       goTo('mota', [-26.2501244, -48.6426105]); 
+    }
+  });
+}
+
+const ubatubaItem = document.getElementById('ubatuba');
+if (ubatubaItem) {
+  ubatubaItem.addEventListener('click', () => goTo('ubatuba', [-26.2153298, -48.5225488]));
+  ubatubaItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('ubatuba', [-26.2153298, -48.5225488]); 
     }
   });
 }
