@@ -54,6 +54,13 @@ const iconeCarapicu = L.icon({
     popupAnchor: [0, -36]
   });
 
+const iconeSardinha = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/sardinha.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -36]
+  });
+
   // --- Marcadores ---
   const markers = {};
 
@@ -162,6 +169,20 @@ const iconeCarapicu = L.icon({
       <b>Praia do Forte</b><br>
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/forte.png" 
            alt="forte" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
+      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
+      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
+      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+    `);
+
+// Bairro Capri (Sardinha)
+  markers['capri'] = L.marker([-26.1739446, -48.5600930], { icon: iconeSardinha })
+    .addTo(map)
+    .bindPopup(`
+      <b>Bairro Capri</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/capri.png" 
+           alt="capri" 
            style="width:200px; display:block; margin:10px auto;"><br>
       No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
       Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
@@ -278,6 +299,18 @@ if (forteItem) {
     if (e.key === 'Enter' || e.key === ' ') { 
       e.preventDefault(); 
       goTo('forte', [-26.1649697, -48.5328666]); 
+    }
+  });
+}
+
+const capriItem = document.getElementById('capri');
+if (capriItem) {
+  capriItem.addEventListener('click', () => goTo('capri', [-26.1739446, -48.5600930]));
+  capriItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('capri',
+[-26.1739446, -48.5600930]);
     }
   });
 }
