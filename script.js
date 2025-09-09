@@ -290,7 +290,7 @@ const iconeAco = L.icon({
     `);
 
 // Arcelor (Fábrica)
-  markers['arcelor'] = L.marker([-26.295030, -48.640989], { icon: iconeEscola })
+  markers['arcelor'] = L.marker([-26.295030, -48.640989], { icon: iconeAco })
     .addTo(map)
     .bindPopup(`
      <b>Arcelor</b><br>
