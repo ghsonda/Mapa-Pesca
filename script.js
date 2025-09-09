@@ -68,6 +68,13 @@ const iconeCaranguejo = L.icon({
     popupAnchor: [0, -36]
   });
 
+const iconeBagre = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/bagre.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -36]
+  });
+
   // --- Marcadores ---
   const markers = {};
 
@@ -225,6 +232,20 @@ const iconeCaranguejo = L.icon({
       Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
     `);
 
+// Ribeira (Bagre)
+  markers['ribeira'] = L.marker([-26.3380494, -48.6852590], { icon: iconeBagre })
+    .addTo(map)
+    .bindPopup(`
+     <b>Ribeira</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/ribeira.png" 
+           alt="ribeira" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
+      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
+      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
+      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+    `);
+
   // --- Ajustar vista para mostrar todos os marcadores ---
   const grupo = L.featureGroup(Object.values(markers));
   try {
@@ -370,6 +391,18 @@ if (manguezalItem) {
       e.preventDefault(); 
       goTo('manguezal',
 [-26.2139927, -48.5699562]);
+    }
+  });
+}
+
+const ribeiraItem = document.getElementById('ribeira');
+if (ribeiraItem) {
+  ribeiraItem.addEventListener('click', () => goTo('ribeira', [-26.3380494, -48.6852590]));
+  ribeiraItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('ribeira',
+[-26.3380494, -48.6852590]);
     }
   });
 }
