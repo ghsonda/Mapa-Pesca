@@ -82,6 +82,13 @@ const iconeEscola = L.icon({
     popupAnchor: [0, -36]
   });
 
+const iconeAco = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/aco.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -36]
+  });
+
   // --- Marcadores ---
   const markers = {};
 
@@ -279,6 +286,16 @@ const iconeEscola = L.icon({
      <b>Escola CVC</b><br>
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/cvc.png" 
            alt="cvc" 
+           style="width:200px; display:block; margin:10px auto;">
+    `);
+
+// Arcelor (Fábrica)
+  markers['arcelor'] = L.marker([-26.295030, -48.640989], { icon: iconeEscola })
+    .addTo(map)
+    .bindPopup(`
+     <b>Arcelor</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/arcelor.png" 
+           alt="arcelor" 
            style="width:200px; display:block; margin:10px auto;">
     `);
 
