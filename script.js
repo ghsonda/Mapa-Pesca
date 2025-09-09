@@ -47,6 +47,13 @@ const iconeMarisco = L.icon({
     popupAnchor: [0, -36]
   });
 
+const iconeCarapicu = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/carapicu.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -36]
+  });
+
   // --- Marcadores ---
   const markers = {};
 
@@ -141,6 +148,20 @@ const iconeMarisco = L.icon({
       <b>Ubatuba</b><br>
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/ubatuba.png" 
            alt="ubatuba" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
+      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
+      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
+      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+    `);
+
+// Praia do Forte (Carapicu)
+  markers['forte'] = L.marker([-26.1649697, -48.5328666], { icon: iconeCarapicu })
+    .addTo(map)
+    .bindPopup(`
+      <b>Praia do Forte</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/forte.png" 
+           alt="forte" 
            style="width:200px; display:block; margin:10px auto;"><br>
       No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
       Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
@@ -246,6 +267,17 @@ if (ubatubaItem) {
     if (e.key === 'Enter' || e.key === ' ') { 
       e.preventDefault(); 
       goTo('ubatuba', [-26.2153298, -48.5225488]); 
+    }
+  });
+}
+
+const forteItem = document.getElementById('forte');
+if (forteItem) {
+  forteItem.addEventListener('click', () => goTo('forte', [-26.1649697, -48.5328666]));
+  forteItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('forte', [-26.1649697, -48.5328666]); 
     }
   });
 }
