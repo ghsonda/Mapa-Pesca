@@ -75,6 +75,13 @@ const iconeBagre = L.icon({
     popupAnchor: [0, -36]
   });
 
+const iconeEscola = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/escola.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -36]
+  });
+
   // --- Marcadores ---
   const markers = {};
 
@@ -263,6 +270,16 @@ const iconeBagre = L.icon({
       Para espécies menores, como siri e camarão, são usadas armadilhas cuidadosamente colocadas no fundo do canal, garantindo que a captura seja seletiva e sustentável.
       A pesca com anzol e linha, mais artesanal, é feita individualmente ou em família, muitas vezes à beira da água, aproveitando a tranquilidade do canal.
       A pesca no Canal do Linguado combina técnica, paciência e tradição, mantendo viva a cultura local e a conexão das comunidades com o mar.
+    `);
+
+// Escola (cvc)
+  markers['cvc'] = L.marker([-26.2722445, -48.6432519], { icon: iconeEscola })
+    .addTo(map)
+    .bindPopup(`
+     <b>Escola CVC</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/cvc.png" 
+           alt="cvc" 
+           style="width:200px; display:block; margin:10px auto;">
     `);
 
   // --- Ajustar vista para mostrar todos os marcadores ---
