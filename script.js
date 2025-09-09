@@ -40,6 +40,13 @@ const iconeRobalo = L.icon({
     popupAnchor: [0, -36]
   });
 
+const iconeMarisco = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/marisco.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -36]
+  });
+
   // --- Marcadores ---
   const markers = {};
 
@@ -92,6 +99,20 @@ const iconeRobalo = L.icon({
       <b>Rancho de Pesca</b><br>
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/rancho.png" 
            alt="rancho" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
+      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
+      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
+      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+    `);
+
+// Trapiche da Vila da Glória (Mariscos)
+  markers['trapicheVG'] = L.marker([-26.221345, -48.664441], { icon: iconeMarisco })
+    .addTo(map)
+    .bindPopup(`
+      <b>Trapiche da Vila da Glória</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/trapicheVG.png" 
+           alt="trapicheVG" 
            style="width:200px; display:block; margin:10px auto;"><br>
       No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
       Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
@@ -164,6 +185,17 @@ if (ranchoItem) {
     if (e.key === 'Enter' || e.key === ' ') { 
       e.preventDefault(); 
       goTo('rancho', [-26.2634738, -48.6500801]); 
+    }
+  });
+}
+
+const trapicheVGItem = document.getElementById('trapicheVG');
+if (trapicheVGItem) {
+  trapicheVGItem.addEventListener('click', () => goTo('trapicheVG', [-26.221345, -48.664441]));
+  trapicheVGItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('trapicheVG', [-26.221345, -48.664441]); 
     }
   });
 }
