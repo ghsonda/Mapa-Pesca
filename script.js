@@ -120,6 +120,20 @@ const iconeMarisco = L.icon({
       Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
     `);
 
+// Praia do Mota (Camarão)
+  markers['mota'] = L.marker([-26,2501244, -48,6426105], { icon: iconeCamarao })
+    .addTo(map)
+    .bindPopup(`
+      <b>Praia do Mota</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/Mota.png" 
+           alt="mota" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      No trapiche do Paulas a pesca é mais que ofício: é memória viva entre o balanço das águas e o cheiro do sal.
+      Barcos partem levando esperança e retornam com peixes, histórias e sorrisos.
+      Ali, redes se abrem como abraços, mãos calejadas encontram repouso, e cada descarregamento é poesia de sobrevivência.
+      Mais que madeira e concreto, o trapiche é coração da comunidade, onde o mar e a vida se encontram em respeito e devoção.
+    `);
+
   // --- Ajustar vista para mostrar todos os marcadores ---
   const grupo = L.featureGroup(Object.values(markers));
   try {
@@ -196,6 +210,17 @@ if (trapicheVGItem) {
     if (e.key === 'Enter' || e.key === ' ') { 
       e.preventDefault(); 
       goTo('trapicheVG', [-26.221345, -48.664441]); 
+    }
+  });
+}
+
+const motaItem = document.getElementById('mota');
+if (trapicheVGItem) {
+  trapicheVGItem.addEventListener('click', () => goTo('mota', [-26,2501244, -48,6426105]));
+  trapicheVGItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('mota', [-26,2501244, -48,6426105]); 
     }
   });
 }
