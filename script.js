@@ -315,7 +315,7 @@ const iconeLinguado = L.icon({
     `);
 
 // Enseada (Linguado)
-  markers['enseada'] = L.marker([-26.2190069, -48.4997343], { icon: iconeLinguadi })
+  markers['enseada'] = L.marker([-26.2190069, -48.4997343], { icon: iconeLinguado })
     .addTo(map)
     .bindPopup(`
       <b>Enseada</b><br>
