@@ -96,6 +96,13 @@ const iconePampu = L.icon({
     popupAnchor: [0, -36]
   });
 
+const iconeLinguado = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/linguado.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -36]
+  });
+
   // --- Marcadores ---
   const markers = {};
 
@@ -307,6 +314,21 @@ const iconePampu = L.icon({
            style="width:200px; display:block; margin:10px auto;">
     `);
 
+// Enseada (Linguado)
+  markers['enseada'] = L.marker([-26.2190069, -48.4997343], { icon: iconeLinguadi })
+    .addTo(map)
+    .bindPopup(`
+      <b>Enseada</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/enseada.png" 
+           alt="enseada" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      Na Enseada, os barcos seguem para além da arrebentação, próximos da costa que leva a Itapoá, Praia Grande e Prainha.
+      No silêncio do mar aberto, a tradição se revela nos gestos: o arrasto duplo percorre o fundo em busca de cardumes, enquanto o caracol, uma rede longa puxada vagarosamente, desenha círculos no oceano, envolvendo os peixes com paciência.
+      É dali que partem barcos simples, carregando histórias e retornando com peixes, camarões e mariscos que sustentam a comunidade.
+      Já a rede de fundeio permanece ancorada, imóvel nas águas, esperando que os cardumes se aproximem por si mesmos, como se o mar viesse até ela.<br><br>
+      Assim, entre o movimento e a espera, a pesca artesanal da Enseada guarda sua poesia, unindo saber antigo e a cadência das marés.
+    `);
+
   // --- Ajustar vista para mostrar todos os marcadores ---
   const grupo = L.featureGroup(Object.values(markers));
   try {
@@ -476,6 +498,18 @@ if (canalItem) {
       e.preventDefault(); 
       goTo('canal',
 [-26.4137465, -48.6167724]);
+    }
+  });
+}
+
+const enseadaItem = document.getElementById('enseada');
+if (enseadaItem) {
+  enseadaItem.addEventListener('click', () => goTo('enseada', [-26.2190069, -48.4997343]));
+  enseadaItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('enseada',
+[-26.2190069, -48.4997343]);
     }
   });
 }
