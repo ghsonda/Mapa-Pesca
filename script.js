@@ -190,9 +190,10 @@ const iconePampu = L.icon({
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/ubatuba.png" 
            alt="ubatuba" 
            style="width:200px; display:block; margin:10px auto;"><br>
-      Em Ubatuba, a pesca é parte da rotina e da memória da comunidade.
-      Os pescadores saem em canoas ou barcos pequenos, lançando redes de emalhe e praticando o arrasto de praia.
-      A cada maré, o mar oferece tainha, parati, corvina e robalo, peixes que alimentam as famílias e mantêm viva a tradição passada de geração em geração.
+      Em Ubatuba, a pesca se desenha na beira da praia, onde homens e mar se encontram no compasso do esforço coletivo.
+      O arrasto de praia traz à areia cardumes que brilham ao sol, lembrando que o mar é generoso quando respeitado. 
+      Já o cerco, feito com redes que abraçam os peixes em movimento, guarda a paciência e a sabedoria passada de geração em geração. 
+      Assim, a comunidade mantém viva sua ligação com o oceano e com o modo simples de viver da pesca artesanal.
     `);
 
 // Praia do Forte (Carapicu)
