@@ -496,8 +496,7 @@ if (canalItem) {
   canalItem.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') { 
       e.preventDefault(); 
-      goTo('canal',
-[-26.4137465, -48.6167724]);
+      goTo('canal', [-26.4137465, -48.6167724]); 
     }
   });
 }
@@ -508,8 +507,7 @@ if (enseadaItem) {
   enseadaItem.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') { 
       e.preventDefault(); 
-      goTo('enseada',
-[-26.2190069, -48.4997343]);
+      goTo('enseada', [-26.2190069, -48.4997343]); 
     }
   });
 }
