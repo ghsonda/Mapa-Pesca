@@ -525,13 +525,13 @@ if (enseadaItem) {
   });
 }
 
-const itaguacuItem = document.getElementById('itaguacu);
+const itaguacuItem = document.getElementById('itaguacu');
 if (itaguacuItem) {
-  itaguacuItem.addEventListener('click', () => goTo('itaguacu, [-26.1821085, -48.5271374]));
+  itaguacuItem.addEventListener('click', () => goTo('itaguacu', [-26.1821085, -48.5271374]));
   itaguacuItem.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') { 
       e.preventDefault(); 
-      goTo('itaguacu, [-26.1821085, -48.5271374]); 
+      goTo('itaguacu', [-26.1821085, -48.5271374]); 
     }
   });
 }
