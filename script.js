@@ -329,6 +329,20 @@ const iconeLinguado = L.icon({
       Assim, entre o movimento e a espera, a pesca artesanal da Enseada guarda sua poesia, unindo saber antigo e a cadência das marés.
     `);
 
+// Itaguaçu (Tainha)
+  markers['itaguacu'] = L.marker([-26.1821085, -48.5271374], { icon: iconeTainha })
+    .addTo(map)
+    .bindPopup(`
+      <b>Itaguaçu</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/itaguacu.png" 
+           alt="itaguacu" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      No Itaguaçu, a pesca artesanal acontece à beira da praia, onde o mar se mistura ao trabalho coletivo.
+      No arrasto de praia, redes são puxadas por muitas mãos, trazendo à areia tainhas, sardinhas, robalos e corvinas que se deixam levar pela maré.
+      Já o cerco envolve cardumes inteiros, fechando o movimento das águas para capturar a fartura de tainha, sardinha e manjuba.
+      Cada lance é mais que sustento: é herança viva de um modo de pescar que se renova a cada temporada.
+    `);
+
   // --- Ajustar vista para mostrar todos os marcadores ---
   const grupo = L.featureGroup(Object.values(markers));
   try {
@@ -507,6 +521,17 @@ if (enseadaItem) {
     if (e.key === 'Enter' || e.key === ' ') { 
       e.preventDefault(); 
       goTo('enseada', [-26.2190069, -48.4997343]); 
+    }
+  });
+}
+
+const itaguacuItem = document.getElementById('itaguacu);
+if (itaguacuItem) {
+  itaguacuItem.addEventListener('click', () => goTo('itaguacu, [-26.1821085, -48.5271374]));
+  itaguacuItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('itaguacu, [-26.1821085, -48.5271374]); 
     }
   });
 }
