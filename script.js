@@ -479,6 +479,28 @@ if (canalItem) {
   });
 }
 
+const toggleBtn = document.getElementById("darkToggle");
+const body = document.body;
+
+// verifica se o usuário já tinha preferência salva
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark");
+  toggleBtn.textContent = "☀️ Modo Claro";
+}
+
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark");
+
+  if (body.classList.contains("dark")) {
+    toggleBtn.textContent = "☀️ Modo Claro";
+    localStorage.setItem("theme", "dark");
+  } else {
+    toggleBtn.textContent = "🌙 Modo Escuro";
+    localStorage.setItem("theme", "light");
+  }
+});
+
+
   // --- Reaplica invalidateSize quando redimensionam a tela ---
   let resizeTimeout;
   window.addEventListener('resize', () => {
