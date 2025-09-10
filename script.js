@@ -448,8 +448,7 @@ if (capriItem) {
   capriItem.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') { 
       e.preventDefault(); 
-      goTo('capri',
-[-26.1739446, -48.5600930]);
+      goTo('capri', [-26.1739446, -48.5600930]); 
     }
   });
 }
