@@ -58,14 +58,19 @@ header .subtitle {
   flex: 1;
 }
 
-.logo-esquerda {
-  width: 80px;
+.logo-esquerda,
+.logo-direita {
+  max-width: 100px;
+  width: 20%;
   height: auto;
 }
 
-.logo-direita {
-  width: 80px;
-  height: auto;
+@media (max-width: 600px) {
+  .logo-esquerda,
+  .logo-direita {
+    max-width: 70px; /* menor em telas pequenas */
+    width: 25%;
+  }
 }
 
 /* ================================
