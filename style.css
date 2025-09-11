@@ -71,8 +71,7 @@ header .subtitle {
 }
 
 @media (max-width: 600px) {
-  .logo-esquerda,
-  .logo-direita {
+  .logo-esquerda {
     max-width: 70px; /* menor em telas pequenas */
     width: 25%;
   }
