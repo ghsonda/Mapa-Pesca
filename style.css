@@ -58,8 +58,7 @@ header .subtitle {
   flex: 1;
 }
 
-.logo-esquerda,
-.logo-direita {
+.logo-esquerda {
   max-width: 100px;
   width: 20%;
   height: auto;
@@ -67,6 +66,8 @@ header .subtitle {
 
 .logo-direita {
   max-width: 140px;
+  width: 20%;
+  height: auto;
 }
 
 @media (max-width: 600px) {
