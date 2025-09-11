@@ -96,12 +96,41 @@ const iconePampu = L.icon({
     popupAnchor: [0, -36]
   });
 
-const iconeLinguado = L.icon({
+  const iconeLinguado = L.icon({
     iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/linguado.png',
     iconSize: [40, 40],
     iconAnchor: [20, 40],
     popupAnchor: [0, -36]
   });
+
+  const iconeTrairas = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/trairas.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -36]
+  });
+
+    const iconeGerival = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/gerival.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -36]
+  });
+
+      const iconePiavucu = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/piavucu.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -36]
+  });
+
+        const iconeBerbigao = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/berbigao.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -36]
+  });
+
 
   // --- Marcadores ---
   const markers = {};
@@ -197,10 +226,9 @@ const iconeLinguado = L.icon({
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/ubatuba.png" 
            alt="ubatuba" 
            style="width:200px; display:block; margin:10px auto;"><br>
-      Em Ubatuba, a pesca se desenha na beira da praia, onde homens e mar se encontram no compasso do esforço coletivo.
-      O arrasto de praia traz à areia cardumes que brilham ao sol, lembrando que o mar é generoso quando respeitado. 
-      Já o cerco, feito com redes que abraçam os peixes em movimento, guarda a paciência e a sabedoria passada de geração em geração. 
-      Assim, a comunidade mantém viva sua ligação com o oceano e com o modo simples de viver da pesca artesanal.
+      Em Ubatuba, a pesca é parte da rotina e da memória da comunidade.
+      Os pescadores saem em canoas ou barcos pequenos, lançando redes de emalhe e praticando o arrasto de praia.
+      A cada maré, o mar oferece tainha, parati, corvina e robalo, peixes que alimentam as famílias e mantêm viva a tradição passada de geração em geração.
     `);
 
 // Praia do Forte (Carapicu)
@@ -314,34 +342,146 @@ const iconeLinguado = L.icon({
            style="width:200px; display:block; margin:10px auto;">
     `);
 
-// Enseada (Linguado)
+    // Enseada (Linguado)
   markers['enseada'] = L.marker([-26.2190069, -48.4997343], { icon: iconeLinguado })
     .addTo(map)
     .bindPopup(`
-      <b>Enseada</b><br>
+     <b>Enseada</b><br>
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/enseada.png" 
            alt="enseada" 
            style="width:200px; display:block; margin:10px auto;"><br>
       Na Enseada, os barcos seguem para além da arrebentação, próximos da costa que leva a Itapoá, Praia Grande e Prainha.
       No silêncio do mar aberto, a tradição se revela nos gestos: o arrasto duplo percorre o fundo em busca de cardumes, enquanto o caracol, uma rede longa puxada vagarosamente, desenha círculos no oceano, envolvendo os peixes com paciência.
-      É dali que partem barcos simples, carregando histórias e retornando com peixes, camarões e mariscos que sustentam a comunidade.
       Já a rede de fundeio permanece ancorada, imóvel nas águas, esperando que os cardumes se aproximem por si mesmos, como se o mar viesse até ela.<br><br>
       Assim, entre o movimento e a espera, a pesca artesanal da Enseada guarda sua poesia, unindo saber antigo e a cadência das marés.
     `);
 
-// Itaguaçu (Tainha)
-  markers['itaguacu'] = L.marker([-26.1821085, -48.5271374], { icon: iconeTainha })
+    // Itaguaçu (Robalo)
+  markers['itg'] = L.marker([-26.1821085, -48.5271374], { icon: iconeRobalo })
     .addTo(map)
     .bindPopup(`
-      <b>Itaguaçu</b><br>
+     <b>Itaguaçu</b><br>
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/itaguacu.png" 
-           alt="itaguacu" 
+           alt="itg" 
            style="width:200px; display:block; margin:10px auto;"><br>
-      No Itaguaçu, a pesca artesanal acontece à beira da praia, onde o mar se mistura ao trabalho coletivo.
+      No Itaguaçu, a pesca artesanal acontece à beira da praia, onde o mar se mistura ao trabalho coletivo. 
       No arrasto de praia, redes são puxadas por muitas mãos, trazendo à areia tainhas, sardinhas, robalos e corvinas que se deixam levar pela maré.
       Já o cerco envolve cardumes inteiros, fechando o movimento das águas para capturar a fartura de tainha, sardinha e manjuba.
       Cada lance é mais que sustento: é herança viva de um modo de pescar que se renova a cada temporada.
     `);
+
+       // Tapera (Traíras)
+  markers['tapera'] = L.marker([-26.2908961, -48.5787930], { icon: iconeTrairas })
+    .addTo(map)
+    .bindPopup(`
+     <b>Tapera</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/tapera.png" 
+           alt="tapera" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      Na Tapera, a pesca acontece nas águas calmas do Rio Acarai, onde a vida do rio se revela em cada movimento.
+      Redes de bate-bate se estendem com cuidado, acompanhando o fluxo das correntes, enquanto o caceio e o cerco seguem antigos saberes passados de geração em geração.
+      Entre o silêncio da água e o esforço dos pescadores, cada captura conta histórias de dedicação, sustento e conexão profunda com a natureza que cerca a comunidade.<br><br>
+      A rede de bate-bate é como uma dança silenciosa entre o pescador e o rio.
+      Estendida com cuidado sobre a água, ela se move ao toque das correntes, batendo suavemente, chamando os peixes a se revelarem.
+      Cada golpe é um convite da natureza, cada captura, um presente da água, resultado de paciência, ritmo e respeito pelo fluxo da vida no rio.
+    `);
+
+    // Centro (Gerival)
+  markers['centro'] = L.marker([-26.2436854, -48.6407041], { icon: iconeGerival })
+    .addTo(map)
+    .bindPopup(`
+     <b>Centro</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/centro.png" 
+           alt="centro" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      No Centro, a Baía é o coração pulsante da pesca. As redes fundeadas descansam na água, ancoradas com cuidado, como se dormissem esperando o momento certo.
+      Diferente das redes que se movem, essas permanecem firmes, oferecendo abrigo e segurança aos peixes até que sejam recolhidas.
+      Entre o vai e vem das marés, Gerival guia os pescadores, e cada dia revela a harmonia entre a paciência do homem e a generosidade da baía, onde cada rede traz não apenas frutos, mas histórias silenciosas da vida no Centro.
+    `);
+
+    // Laranjeiras (Piavuçus)
+  markers['laranjeiras'] = L.marker([-26.2720638, -48.6612435], { icon: iconePiavucu })
+    .addTo(map)
+    .bindPopup(`
+     <b>Laranjeiras</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/laranjeiras.png" 
+           alt="laranjeiras" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      Em Laranjeiras, a pesca se desenrola nas águas tranquilas da baía, onde o balanço suave das ondas acompanha o trabalho dos pescadores.
+      Redes fundeadas descansam sobre a água, ancoradas com cuidado, esperando o momento em que os peixes se aproximam.
+      Gerival, o caceio e a experiência de quem conhece cada curva da baía guiam os gestos precisos, transformando cada dia de pesca em uma dança entre paciência e habilidade.
+      Entre traíras, piavuçus, robalos e tainhas, cada captura é um presente do mar, carregando histórias de sustento, tradição e a profunda conexão da comunidade com as águas que sustentam sua vida.
+    `);
+
+    // Miranda (Caranguejo)
+  markers['miranda'] = L.marker([-26.3470028, -48.6467491], { icon: iconeCaranguejo })
+    .addTo(map)
+    .bindPopup(`
+     <b>Miranda</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/miranda.png" 
+           alt="miranda" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      No Miranda, a pesca acontece nas águas tranquilas da baía, onde cada gesto é guiado pelo saber de Gerival.
+      Redes fundeadas descansam sobre a superfície, esperando pacientemente o movimento dos peixes, enquanto o caceio percorre lentamente o espelho da água, em busca da captura perfeita.
+      Lacinhos para caranguejo e a coleta manual de pequenos frutos do mar revelam a riqueza e a diversidade que o Miranda oferece. 
+      Cada peixe, cada caranguejo, cada fruto recolhido é fruto de dedicação, paciência e respeito pela natureza, mantendo viva a tradição e a identidade da comunidade que vive do mar.
+    `);
+
+        // Praia Paum (Berbigão)
+  markers['paum'] = L.marker([-26.2565854, -48.6468206], { icon: iconeBerbigao })
+    .addTo(map)
+    .bindPopup(`
+     <b>Praia Paum</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/paum.png" 
+           alt="paum" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      Na Praia Paum, a pesca acontece nas águas serenas da região, onde cada gesto é feito com cuidado e experiência.
+      A coleta manual domina o trabalho diário, e muitos pescadores dedicam-se especialmente à captura do berbigão, joia do mar local.
+      Redes fundeadas descansam sobre a água, enquanto o Gerival acompanha cada movimento, orientando o ritmo da atividade.
+      Entre a paciência e a técnica, cada fruto do mar colhido é mais do que alimento: é tradição, história e a viva conexão da comunidade com a generosidade da natureza, mantendo viva a identidade e o sustento de quem se dedica ao mar.
+    `);
+
+      // Vila Antenor (Berbigão)
+  markers['antenor'] = L.marker([-26.3623625, -48.6637319], { icon: iconeBerbigao })
+    .addTo(map)
+    .bindPopup(`
+     <b>Vila Antenor</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/antenor.png" 
+           alt="antenor" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      Na Vila Antenor, a pesca se estende pelas águas tranquilas da baía e pelo Canal do Linguado, onde cada gesto reflete a experiência e a tradição dos pescadores locais.
+      De tarrafa ou de rede de bate-bate, com cerco ou pela coleta manual de ostras, berbigões, bacucus e outros frutos do mar, cada ação é feita com paciência e cuidado, em sintonia com o ritmo da água.
+      Entre o silêncio da baía e o trabalho atento, cada captura se transforma em história, sustento e identidade, mantendo viva a conexão profunda da comunidade com o mar que há gerações alimenta suas famílias.
+    `);
+
+      // Gamboa (sla)
+  markers['gamboa'] = L.marker([-26.3703402, -48.6317677], { icon: iconeCamarao })
+    .addTo(map)
+    .bindPopup(`
+     <b>Gamboa</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/gamboa.png" 
+           alt="gamboa" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      Na Gamboa, a pesca se desenrola nas águas serenas da baía, onde cada gesto reflete a experiência e a tradição dos pescadores locais.
+      Redes fundeadas descansam sobre a superfície, enquanto o caceio percorre lentamente a água e a rede de bate-bate se move suavemente, em sintonia com as correntes.
+      A coleta manual garante os frutos mais delicados do mar, reunindo o sustento que a comunidade espera com paciência e cuidado.
+      Cada captura é mais do que alimento: é história, dedicação e a viva conexão de quem vive em harmonia com a baía, mantendo viva a identidade e a tradição que atravessa gerações.
+    `);
+
+      // Ervino (sla)
+  markers['ervino2'] = L.marker([-26.3944077, -48.5858808], { icon: iconeRobalo })
+    .addTo(map)
+    .bindPopup(`
+     <b>Ervino</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/ervino.png" 
+           alt="ervino2" 
+           style="width:200px; display:block; margin:10px auto;"><br>
+      No Ervino, a pesca se desenrola à beira da praia, onde a coleta manual da minhoca se torna um gesto de paciência e conexão com a natureza.
+      Cada toque na areia revela o cuidado e a experiência dos pescadores, que conhecem profundamente os segredos do litoral.
+      Embora discreta, essa atividade é essencial, oferecendo sustento e preservando tradições que atravessam gerações.
+      No silêncio da praia, entre a brisa e o som das ondas, cada minhoca coletada representa a harmonia entre homem e natureza, lembrando que a vida do pescador se constrói na atenção aos pequenos detalhes que fazem toda a diferença.
+    `);
+
 
   // --- Ajustar vista para mostrar todos os marcadores ---
   const grupo = L.featureGroup(Object.values(markers));
@@ -462,7 +602,8 @@ if (capriItem) {
   capriItem.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') { 
       e.preventDefault(); 
-      goTo('capri', [-26.1739446, -48.5600930]); 
+      goTo('capri',
+[-26.1739446, -48.5600930]);
     }
   });
 }
@@ -509,7 +650,8 @@ if (canalItem) {
   canalItem.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') { 
       e.preventDefault(); 
-      goTo('canal', [-26.4137465, -48.6167724]); 
+      goTo('canal',
+[-26.4137465, -48.6167724]);
     }
   });
 }
@@ -520,18 +662,116 @@ if (enseadaItem) {
   enseadaItem.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') { 
       e.preventDefault(); 
-      goTo('enseada', [-26.2190069, -48.4997343]); 
+      goTo('enseada',
+[-26.2190069, -48.4997343]);
     }
   });
 }
 
-const itaguacuItem = document.getElementById('itaguacu');
-if (itaguacuItem) {
-  itaguacuItem.addEventListener('click', () => goTo('itaguacu', [-26.1821085, -48.5271374]));
-  itaguacuItem.addEventListener('keydown', (e) => {
+const itgItem = document.getElementById('itg');
+if (itgItem) {
+  itgItem.addEventListener('click', () => goTo('itg', [-26.1821085, -48.5271374]));
+  itgItem.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') { 
       e.preventDefault(); 
-      goTo('itaguacu', [-26.1821085, -48.5271374]); 
+      goTo('itg',
+[-26.1821085, -48.5271374]);
+    }
+  });
+}
+
+const taperaItem = document.getElementById('tapera');
+if (taperaItem) {
+  taperaItem.addEventListener('click', () => goTo('tapera', [-26.2908961, -48.5787930]));
+  taperaItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('tapera',
+[-26.2908961, -48.5787930]);
+    }
+  });
+}
+
+const centroItem = document.getElementById('centro');
+if (centroItem) {
+  centroItem.addEventListener('click', () => goTo('centro', [-26.2436854, -48.6407041]));
+  centroItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('centro',
+[-26.2436854, -48.6407041]);
+    }
+  });
+}
+
+const laranjeirasItem = document.getElementById('laranjeiras');
+if (laranjeirasItem) {
+  laranjeirasItem.addEventListener('click', () => goTo('laranjeiras', [-26.2720638, -48.6612435]));
+  laranjeirasItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('laranjeiras',
+[-26.2720638, -48.6612435]);
+    }
+  });
+}
+
+const mirandaItem = document.getElementById('miranda');
+if (mirandaItem) {
+  mirandaItem.addEventListener('click', () => goTo('miranda', [-26.3470028, -48.6467491]));
+  mirandaItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('miranda',
+[-26.3470028, -48.6467491]);
+    }
+  });
+}
+
+const paumItem = document.getElementById('paum');
+if (paumItem) {
+  paumItem.addEventListener('click', () => goTo('paum', [-26.2565854, -48.6468206]));
+  paumItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('paum',
+[-26.2565854, -48.6468206]);
+    }
+  });
+}
+
+const antenorItem = document.getElementById('antenor');
+if (antenorItem) {
+  antenorItem.addEventListener('click', () => goTo('antenor', [-26.3623625, -48.6637319]));
+  antenorItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('antenor',
+[-26.3623625, -48.6637319]);
+    }
+  });
+}
+
+const gamboaItem = document.getElementById('gamboa');
+if (gamboaItem) {
+  gamboaItem.addEventListener('click', () => goTo('gamboa', [-26.3703402, -48.6317677]));
+  gamboaItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('gamboa',
+[-26.3703402, -48.6317677]);
+    }
+  });
+}
+
+const ervino2Item = document.getElementById('ervino2');
+if (ervino2Item) {
+  ervino2Item.addEventListener('click', () => goTo('ervino2', [-26.3944077, -48.5858808]));
+  ervino2Item.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('ervino2',
+[-26.3944077, -48.5858808]);
     }
   });
 }
