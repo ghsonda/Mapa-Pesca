@@ -131,6 +131,13 @@ const iconePampu = L.icon({
     popupAnchor: [0, -36]
   });
 
+        const iconeMinhoca = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/minhoca.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -36]
+  });
+
 
   // --- Marcadores ---
   const markers = {};
@@ -454,8 +461,8 @@ const iconePampu = L.icon({
       Entre o silêncio da baía e o trabalho atento, cada captura se transforma em história, sustento e identidade, mantendo viva a conexão profunda da comunidade com o mar que há gerações alimenta suas famílias.
     `);
 
-      // Gamboa (sla)
-  markers['gamboa'] = L.marker([-26.3703402, -48.6317677], { icon: iconeCamarao })
+      // Gamboa (Bagre)
+  markers['gamboa'] = L.marker([-26.3703402, -48.6317677], { icon: iconeBagre })
     .addTo(map)
     .bindPopup(`
      <b>Gamboa</b><br>
@@ -468,8 +475,8 @@ const iconePampu = L.icon({
       Cada captura é mais do que alimento: é história, dedicação e a viva conexão de quem vive em harmonia com a baía, mantendo viva a identidade e a tradição que atravessa gerações.
     `);
 
-      // Ervino (sla)
-  markers['ervino2'] = L.marker([-26.3944077, -48.5858808], { icon: iconeRobalo })
+      // Ervino (Minhoca)
+  markers['ervino2'] = L.marker([-26.3944077, -48.5858808], { icon: iconeMinhoca })
     .addTo(map)
     .bindPopup(`
      <b>Ervino</b><br>
