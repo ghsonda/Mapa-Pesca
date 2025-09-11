@@ -65,6 +65,10 @@ header .subtitle {
   height: auto;
 }
 
+.logo-direita {
+  max-width: 140px;
+}
+
 @media (max-width: 600px) {
   .logo-esquerda,
   .logo-direita {
