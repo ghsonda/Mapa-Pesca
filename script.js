@@ -131,7 +131,7 @@ const iconePampu = L.icon({
     popupAnchor: [0, -36]
   });
 
-        const iconeMinhoca = L.icon({
+          const iconeMinhoca = L.icon({
     iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/minhoca.png',
     iconSize: [40, 40],
     iconAnchor: [20, 40],
