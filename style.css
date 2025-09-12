@@ -326,6 +326,18 @@ header .subtitle {
   transform: scale(1.05);
 }
 
+@media (max-width: 600px) {
+  #darkToggle {
+    position: static;   /* deixa de ser fixo no canto */
+    display: block;
+    margin: 12px auto 0; /* centraliza abaixo do título */
+  }
+
+  .header-inner .right {
+    right: 20px; /* aproxima mais da borda no mobile */
+  }
+}
+
 
 /* ================================
    Responsividade
