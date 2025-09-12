@@ -27,9 +27,9 @@ body {
 header {
   background: var(--primary);
   color: #fff;
-  text-align: center;
-  padding: 30px 20px;
+  padding: 18px 20px;
   border-radius: 0 0 var(--radius) var(--radius);
+  position: relative;
 }
 header h1 {
   font-size: 2.5rem;
@@ -44,39 +44,69 @@ header .subtitle {
   color: #cce5d0;
   font-weight: 300;
 }
-
-.header-container {
+.header-inner {
+  max-width: 980px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 1000px;
-  margin: 0 auto;
+  justify-content: center;
+  gap: 18px;
+  position: relative;
 }
 
-.header-text {
-  text-align: center;
-  flex: 1;
+/* logos responsivos maiores */
+.brand-logo {
+  width: auto;                       /* mantém a proporção */
+  height: clamp(56px, 10vw, 140px);  /* mínimo 56px, cresce com a viewport até 140px */
+  max-height: 140px;
+  object-fit: contain;
+  display: block;
+  flex: 0 0 auto;
 }
 
-.logo-esquerda {
-  max-width: 100px;
-  width: 20%;
-  height: auto;
+/* Evita que o botão de modo escuro sobreponha o logo direito */
+.header-inner .right {
+  position: absolute;
+  right: 80px;  
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.logo-direita {
-  max-width: 140px;
-  width: 20%;
-  height: auto;
+/* posição left mantendo distância da borda */
+.header-inner .left {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-@media (max-width: 600px) {
-  .logo-esquerda, 
-  .logo-direita {
-    max-width: 70px; /* menor em telas pequenas */
-    width: 25%;
+/* Ajustes para celular */
+@media (max-width: 480px) {
+  .brand-logo {
+    height: clamp(36px, 10vw, 64px); /* menor em celulares */
   }
+  .header-inner .right { right: 20px; } /* se o botão estiver sob o logo, diminua esse offset */
+  header h1 { font-size: 1.15rem; }
 }
+
+
+.brand-text {
+  text-align: center;
+  line-height: 1;
+}
+
+.header-inner .left { margin-right: 26px; }
+.header-inner .right { margin-left: 26px; }
+
+#darkToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; 
+}
+
+.header-inner .left { position: absolute; left: 20px; }
+.header-inner .right { position: absolute; right: 20px; }
 
 /* ================================
    Page Wrapper & Columns
