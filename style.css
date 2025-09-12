@@ -331,6 +331,7 @@ header .subtitle {
     position: static;   /* deixa de ser fixo no canto */
     display: block;
     margin: 12px auto 0; /* centraliza abaixo do título */
+    right: 0px;
   }
 
   .header-inner .right {
