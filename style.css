@@ -330,7 +330,7 @@ header .subtitle {
     position: static;   
     display: block;
     margin: 12px auto 0; 
-    right: 0px;
+    right: -20px;
   }
   .header-inner .right {
     right: 20px; 
