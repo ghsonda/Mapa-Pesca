@@ -44,59 +44,47 @@ header .subtitle {
   color: #cce5d0;
   font-weight: 300;
 }
-.header-inner {
+/* header layout em grid — centraliza o texto e mantém logotipos nas laterais */
+.header-inner{
   max-width: 980px;
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: center;
-  gap: 18px;
+  gap: 16px;
+  padding: 8px 16px;
   position: relative;
 }
 
-/* logos responsivos maiores */
+/* logos sem posicionamento absoluto — redimensionam responsáveis */
 .brand-logo {
-  width: auto;                       /* mantém a proporção */
-  height: clamp(56px, 10vw, 140px);  /* mínimo 56px, cresce com a viewport até 140px */
-  max-height: 140px;
+  width: auto;
+  height: clamp(40px, 8vw, 140px);
   object-fit: contain;
   display: block;
-  flex: 0 0 auto;
 }
 
-/* Evita que o botão de modo escuro sobreponha o logo direito */
-.header-inner .right {
-  position: absolute;
-  right: 80px;  
-  top: 50%;
-  transform: translateY(-50%);
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-/* posição left mantendo distância da borda */
-.header-inner .left {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+.brand-text { text-align: center; line-height: 1; }
+
+#darkToggle {
+  margin: 0;
+  padding: 8px 12px;
+  position: relative;
+  z-index: 50;
 }
 
-/* Ajustes para celular */
-@media (max-width: 480px) {
-  .brand-logo {
-    height: clamp(36px, 10vw, 64px); /* menor em celulares */
-  }
-  .header-inner .right { right: 20px; } /* se o botão estiver sob o logo, diminua esse offset */
+@media (max-width: 600px) {
+  .brand-logo { height: clamp(28px, 10vw, 64px); }
   header h1 { font-size: 1.15rem; }
+  .header-controls { gap: 6px; }
+  .header-controls .brand-logo { height: clamp(24px, 10vw, 48px); }
 }
-
-
-.brand-text {
-  text-align: center;
-  line-height: 1;
-}
-
-.header-inner .left { margin-right: 26px; }
-.header-inner .right { margin-left: 26px; }
 
 #darkToggle {
   position: fixed;
