@@ -442,3 +442,78 @@ body.dark .card h3 {
 body.dark .card p b {
   color: #4dd0e1;
 }
+
+body.dark .defeso-grafico .barra {
+  background: #2a2a2a;
+}
+
+body.dark .defeso-grafico .periodo {
+  background: #4dd0e1;
+}
+
+body.dark .defeso-grafico .titulo {
+  color: #e0e0e0;
+}
+
+body.dark .meses span {
+  color: #aaa;
+}
+
+/* ================================
+   Gráfico de Defeso
+================================ */
+.defeso-grafico {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.defeso-grafico .linha {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.defeso-grafico .titulo {
+  width: 180px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.defeso-grafico .barra {
+  flex: 1;
+  height: 22px;
+  background: #eee;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.defeso-grafico .periodo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: var(--accent);
+  border-radius: 12px;
+}
+
+/* intervalos (em %) correspondentes aos meses */
+.defeso-grafico .periodo.jan { left: 0%; width: 8.3%; }
+.defeso-grafico .periodo.jan.mar { left: 0%; width: 25%; }
+.defeso-grafico .periodo.fev { left: 8.3%; width: 8.3%; }
+.defeso-grafico .periodo.nov.fev { left: 83.3%; width: 16.7%; } /* Nov-Dez-Jan-Fev */
+.defeso-grafico .periodo.mai.jul { left: 33.3%; width: 25%; }
+.defeso-grafico .periodo.out.dez { left: 75%; width: 25%; }
+
+/* linha dos meses */
+.meses {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-left: 190px;
+  font-size: 0.75rem;
+  color: #555;
+}
+.meses span {
+  text-align: center;
+}
