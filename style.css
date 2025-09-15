@@ -44,47 +44,58 @@ header .subtitle {
   color: #cce5d0;
   font-weight: 300;
 }
-/* header layout em grid — centraliza o texto e mantém logotipos nas laterais */
-.header-inner{
+.header-inner {
   max-width: 980px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 16px;
-  padding: 8px 16px;
-  position: relative;
-}
-
-/* logos sem posicionamento absoluto — redimensionam responsáveis */
-.brand-logo {
-  width: auto;
-  height: clamp(40px, 8vw, 140px);
-  object-fit: contain;
-  display: block;
-}
-
-.header-controls {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-.brand-text { text-align: center; line-height: 1; }
-
-#darkToggle {
-  margin: 0;
-  padding: 8px 12px;
+  justify-content: center;
+  gap: 18px;
   position: relative;
-  z-index: 50;
 }
 
-@media (max-width: 600px) {
-  .brand-logo { height: clamp(28px, 10vw, 64px); }
-  header h1 { font-size: 1.15rem; }
-  .header-controls { gap: 6px; }
-  .header-controls .brand-logo { height: clamp(24px, 10vw, 48px); }
+/* logos responsivos maiores */
+.brand-logo {
+  width: auto;                       
+  height: clamp(56px, 10vw, 140px);  
+  max-height: 140px;
+  object-fit: contain;
+  display: block;
+  flex: 0 0 auto;
 }
+
+/* Evita que o botão de modo escuro sobreponha o logo direito */
+.header-inner .right {
+  position: absolute;
+  right: 80px;  
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* posição left mantendo distância da borda */
+.header-inner .left {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Ajustes para celular */
+@media (max-width: 480px) {
+  .brand-logo {
+    height: clamp(36px, 10vw, 64px); 
+  }
+  .header-inner .right { right: 20px; } 
+  header h1 { font-size: 1.15rem; }
+}
+
+.brand-text {
+  text-align: center;
+  line-height: 1;
+}
+
+.header-inner .left { margin-right: 26px; }
+.header-inner .right { margin-left: 26px; }
 
 #darkToggle {
   position: fixed;
@@ -316,17 +327,15 @@ header .subtitle {
 
 @media (max-width: 600px) {
   #darkToggle {
-    position: static;   /* deixa de ser fixo no canto */
+    position: static;   
     display: block;
-    margin: 12px auto 0; /* centraliza abaixo do título */
+    margin: 12px auto 0; 
     right: 0px;
   }
-
   .header-inner .right {
-    right: 20px; /* aproxima mais da borda no mobile */
+    right: 20px; 
   }
 }
-
 
 /* ================================
    Responsividade
@@ -365,68 +374,101 @@ body.dark {
   background: #121212;
   color: #e0e0e0;
 }
-
-/* Header */
 body.dark header {
   background: #00695c;
   color: #ffffff;
 }
-
-/* Sidebar */
 body.dark .sidebar {
   background: #1e1e1e;
   border: 1px solid #2e2e2e;
 }
-
-body.dark .sidebar h3 {
-  color: #4dd0e1;
-}
-
+body.dark .sidebar h3 { color: #4dd0e1; }
 body.dark .legend-item {
   background: #222;
   border: 1px solid #2e2e2e;
 }
-
 body.dark .legend-item:hover {
   background: #2a2a2a;
   box-shadow: 0 3px 8px rgba(0,0,0,0.5);
 }
-
-/* Texto explicativo */
 body.dark .info {
   background: #1e1e1e;
   color: #ddd;
   border: 1px solid #2e2e2e;
 }
-
-body.dark .info h2 {
-  color: #81c784;
-}
-body.dark .info p {
-  color: #ffffff;
-}
-
-/* Seções */
+body.dark .info h2 { color: #81c784; }
+body.dark .info p { color: #ffffff; }
 body.dark .secao {
   background: #1e1e1e;
   border: 1px solid #2e2e2e;
 }
-
-body.dark .secao h2 {
-  color: #4dd0e1;
-}
-
-/* Cards */
+body.dark .secao h2 { color: #4dd0e1; }
 body.dark .card {
   background: #1e1e1e;
   border: 1px solid #2e2e2e;
   color: #e0e0e0;
 }
+body.dark .card h3 { color: #81c784; }
+body.dark .card p b { color: #4dd0e1; }
 
-body.dark .card h3 {
-  color: #81c784;
+/* ========== FIX HEADER RESPONSIVO (NOVO BLOCO) ========== */
+.header-inner{
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(48px, 140px) 1fr minmax(48px, 140px);
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  position: relative;
 }
-
-body.dark .card p b {
-  color: #4dd0e1;
+.brand-logo {
+  width: auto;
+  height: clamp(36px, 8vw, 120px);
+  object-fit: contain;
+  display: block;
+}
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+}
+.header-inner .left,
+.header-inner .right {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+  margin: 0 !important;
+}
+.brand-text {
+  text-align: center;
+  line-height: 1;
+  padding: 0 6px;
+  word-break: break-word;
+}
+#darkToggle {
+  position: relative;
+  z-index: 60;
+  margin: 0;
+}
+@media (max-width: 720px) {
+  .header-inner{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 6px;
+  }
+  .brand-text { order: 1; padding: 6px 10px; }
+  .header-controls { order: 2; justify-content: center; width: 100%; gap: 8px; }
+  .brand-logo { height: clamp(24px, 10vw, 64px); }
+  #darkToggle {
+    position: static !important;
+    display: inline-block;
+    margin: 6px auto 0;
+  }
+}
+@media (max-width: 420px) {
+  .header-controls .brand-logo { display: none; }
 }
