@@ -61,7 +61,7 @@
         <span>🦐 Camarão-sete-barbas</span>
         <span>🐟 Tainha</span>
         <span>🦀 Caranguejo-uçá</span>
-        <span>🐠 Corvina</span>
+        <span>🦪 Mariscos</span>
       </div>
     </div>
 
@@ -94,7 +94,7 @@
     <div class="linha">
       <span class="titulo">🦐 Camarão-sete-barbas</span>
       <div class="barra">
-        <span class="periodo nov fev"></span>
+        <span class="periodo jan abr"></span>
       </div>
     </div>
 
@@ -112,13 +112,50 @@
       </div>
     </div>
 
-    <div class="linha">
-      <span class="titulo">🐠 Corvina</span>
-      <div class="barra">
-        <span class="periodo out dez"></span>
-      </div>
+  <div class="linha">
+    <span class="titulo">🐠 Robalo</span>
+    <div class="barra">
+      <span class="periodo jan mar"></span>
     </div>
   </div>
+
+    <div class="linha">
+    <span class="titulo">🐟 Bagre</span>
+    <div class="barra">
+      <span class="periodo jan mar"></span>
+    </div>
+  </div>
+
+  <div class="linha">
+    <span class="titulo">🦪 Mariscos</span>
+    <div class="barra">
+      <span class="periodo set dez"></span>
+    </div>
+  </div>
+
+  <div class="linha">
+    <span class="titulo">🐟 Sardinha</span>
+    <div class="barra">
+      <span class="periodo out fev"></span>
+    </div>
+  </div>
+
+  <div class="linha">
+    <span class="titulo">🐟 Linguado</span>
+    <div class="barra">
+      <span class="periodo jun jul"></span>
+    </div>
+  </div>
+
+
+  <div class="linha">
+    <span class="titulo">🦪 Berbigão</span>
+    <div class="barra">
+      <span class="periodo set dez"></span>
+    </div>
+  </div>
+
+</div>
 
   <!-- legenda dos meses -->
   <div class="meses">
@@ -127,6 +164,53 @@
   </div>
 </section>
 
+
+<!-- Importa Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+<section class="secao">
+  <h2>📊 Produção Pesqueira em São Francisco do Sul</h2>
+  <canvas id="pescaChart" width="700" height="350"></canvas>
+</section>
+
+<script>
+  // *** Substitua estes valores pelos números extraídos (em toneladas) ***
+  // Exemplo de anos — ajuste conforme os anos disponíveis nos boletins
+  const anos = ['2017','2018','2019','2020','2021','2022','2023'];
+
+  // <--- coloque aqui os valores reais extraídos -->
+  const toneladas = [ 5200, 6100, 4800, 5300, 5000, 4500, 4700 ];
+
+  const ctx = document.getElementById('pescaChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: anos,
+      datasets: [{
+        label: 'Produção (toneladas)',
+        data: toneladas,
+        backgroundColor: '#4dd0e1',
+        borderRadius: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: { enabled: true }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: { display: true, text: 'Toneladas' }
+        },
+        x: {
+          title: { display: true, text: 'Ano' }
+        }
+      }
+    }
+  });
+</script>
 
 
     <!-- sidebar permanece no DOM do wrapper, mas é posicionada absolutamente à esquerda do centro -->
@@ -315,7 +399,7 @@
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/minhoca.png" alt="ervino2" class="legend-icon">
       <div>
         <strong>Ervino</strong><br>
-        <span>Pesca de Robalo</span>
+        <span>Pesca de Minhoca</span>
       </div>
     </div>
 
