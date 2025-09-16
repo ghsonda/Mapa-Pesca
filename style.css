@@ -459,6 +459,11 @@ body.dark .meses span {
   color: #aaa;
 }
 
+body.dark .defeso-grafico .periodo.out.fev,
+body.dark .defeso-grafico .periodo.out.fev::after {
+  background: #4dd0e1; 
+}
+
 /* ================================
    Gráfico de Defeso
 ================================ */
@@ -498,13 +503,41 @@ body.dark .meses span {
   border-radius: 12px;
 }
 
+
 /* intervalos (em %) correspondentes aos meses */
 .defeso-grafico .periodo.jan { left: 0%; width: 8.3%; }
 .defeso-grafico .periodo.jan.mar { left: 0%; width: 25%; }
+.defeso-grafico .periodo.jan.abr { left: 5%; width: 30%; }
 .defeso-grafico .periodo.fev { left: 8.3%; width: 8.3%; }
 .defeso-grafico .periodo.nov.fev { left: 83.3%; width: 16.7%; } /* Nov-Dez-Jan-Fev */
 .defeso-grafico .periodo.mai.jul { left: 33.3%; width: 25%; }
+.defeso-grafico .periodo.jun.jul { left: 45%; width: 13%; }
+.defeso-grafico .periodo.set.dez { left: 70%; width: 40%; }
 .defeso-grafico .periodo.out.dez { left: 75%; width: 25%; }
+
+/* Sardinha: Outubro a Fevereiro */
+.defeso-grafico .periodo.out.fev {
+  left: 75%;   /* começa em Outubro */
+  width: 25%;  /* pinta Outubro, Novembro e Dezembro */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #00bfa5;
+  border-radius: 12px;
+}
+
+/* extensão até Fevereiro */
+.defeso-grafico .periodo.out.fev::after {
+  content: "";
+  position: absolute;
+  left: -300%;   /* volta para o início da barra */
+  width: 50%; /* Jan + Fev */
+  top: 0;
+  bottom: 0;
+  background: #00bfa5;
+  border-radius: 12px;
+}
+
 
 /* linha dos meses */
 .meses {
