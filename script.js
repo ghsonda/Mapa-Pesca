@@ -138,6 +138,13 @@ const iconePampu = L.icon({
     popupAnchor: [0, -36]
   });
 
+            const iconePorto = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/portologo.png',
+    iconSize: [50, 50],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -36]
+  });
+
 
   // --- Marcadores ---
   const markers = {};
@@ -489,6 +496,15 @@ const iconePampu = L.icon({
       No silêncio da praia, entre a brisa e o som das ondas, cada minhoca coletada representa a harmonia entre homem e natureza, lembrando que a vida do pescador se constrói na atenção aos pequenos detalhes que fazem toda a diferença.
     `);
 
+// porto 
+  markers['porto'] = L.marker([-26.237629980066348, -48.63846492962614], { icon: iconePorto })
+    .addTo(map)
+    .bindPopup(`
+     <b>Porto - SFS</b><br>
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/porto.png" 
+           alt="porto" 
+           style="width:200px; display:block; margin:10px auto;">
+    `);
 
   // --- Ajustar vista para mostrar todos os marcadores ---
   const grupo = L.featureGroup(Object.values(markers));
@@ -779,6 +795,42 @@ if (ervino2Item) {
       e.preventDefault(); 
       goTo('ervino2',
 [-26.3944077, -48.5858808]);
+    }
+  });
+}
+
+const cvcItem = document.getElementById('cvc');
+if (cvcItem) {
+  cvcItem.addEventListener('click', () => goTo('cvc', [-26.2722445, -48.6432519]));
+  cvcItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('cvc',
+[-26.2722445, -48.6432519]);
+    }
+  });
+}
+
+const arcelorItem = document.getElementById('arcelor');
+if (arcelorItem) {
+  arcelorItem.addEventListener('click', () => goTo('arcelor', [-26.295030, -48.640989]));
+  arcelorItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('arcelor',
+[-26.295030, -48.640989]);
+    }
+  });
+}
+
+const portoItem = document.getElementById('porto');
+if (portoItem) {
+  portoItem.addEventListener('click', () => goTo('porto', [-26.237629980066348, -48.63846492962614]));
+  portoItem.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { 
+      e.preventDefault(); 
+      goTo('porto',
+[-26.237629980066348, -48.63846492962614]);
     }
   });
 }
