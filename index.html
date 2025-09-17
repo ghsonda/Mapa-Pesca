@@ -176,10 +176,10 @@
 <script>
   // *** Substitua estes valores pelos números extraídos (em toneladas) ***
   // Exemplo de anos — ajuste conforme os anos disponíveis nos boletins
-  const anos = ['2017','2018','2019','2020','2021','2022','2023'];
+  const anos = ['2017','2018','2019','2024'];
 
   // <--- coloque aqui os valores reais extraídos -->
-  const toneladas = [ 5200, 6100, 4800, 5300, 5000, 4500, 4700 ];
+  const toneladas = [ 898.57, 929.27, 1256.03, 1268.87 ];
 
   const ctx = document.getElementById('pescaChart').getContext('2d');
   new Chart(ctx, {
@@ -413,6 +413,27 @@
       <div>
         <strong>Ervino</strong><br>
         <span>Pesca de Minhoca</span>
+      </div>
+    </div>
+
+          <div class="legend-item" id="cvc">
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/escola.png" alt="cvc" class="legend-icon">
+      <div>
+        <strong>Escola CVC</strong><br>
+      </div>
+    </div>
+
+          <div class="legend-item" id="arcelor">
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/aco.png" alt="arcelor" class="legend-icon">
+      <div>
+        <strong>Arcelor</strong><br>
+      </div>
+    </div>
+
+          <div class="legend-item" id="porto">
+      <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/portologo.png" alt="porto" class="legend-icon">
+      <div>
+        <strong>Porto - SFS</strong><br>
       </div>
     </div>
 
