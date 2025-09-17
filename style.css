@@ -254,6 +254,35 @@ header .subtitle {
   border-radius: 2px;
 }
 
+.secao2 {
+  max-width: 1000px;
+  margin: 70px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+.secao2 h2 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+.secao2 h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 60%;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+
 /* ================================
    Grid & Cards
 ================================ */
@@ -428,6 +457,15 @@ body.dark .secao h2 {
   color: #4dd0e1;
 }
 
+body.dark .secao2 {
+  background: #1e1e1e;
+  border: 1px solid #2e2e2e;
+}
+
+body.dark .secao2 h2 {
+  color: #4dd0e1;
+}
+
 /* Cards */
 body.dark .card {
   background: #1e1e1e;
@@ -549,4 +587,17 @@ body.dark .defeso-grafico .periodo.out.fev::after {
 }
 .meses span {
   text-align: center;
+}
+
+.meses {
+  display: flex;
+  justify-content: space-between; /* distribui bem de Jan a Dez */
+  margin-top: 8px;
+  font-size: 0.9em;
+  flex-wrap: nowrap; /* impede quebra */
+}
+
+.meses span {
+  flex: 1;               /* cada mês ocupa o mesmo espaço */
+  text-align: center;    /* centraliza o texto */
 }
