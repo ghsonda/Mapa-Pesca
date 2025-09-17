@@ -589,15 +589,17 @@ body.dark .defeso-grafico .periodo.out.fev::after {
   text-align: center;
 }
 
-.meses {
-  display: flex;
-  justify-content: space-between; /* distribui bem de Jan a Dez */
-  margin-top: 8px;
-  font-size: 0.9em;
-  flex-wrap: nowrap; /* impede quebra */
+@media (max-width: 480px) {
+  .meses {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 0.8rem;   /* levemente menor no celular */
+  }
+
+  .meses span {
+    flex: 1;
+    text-align: center;
+  }
 }
 
-.meses span {
-  flex: 1;               /* cada mês ocupa o mesmo espaço */
-  text-align: center;    /* centraliza o texto */
-}
