@@ -174,22 +174,22 @@
 </section>
 
 <script>
-  // *** Substitua estes valores pelos números extraídos (em toneladas) ***
-  // Exemplo de anos — ajuste conforme os anos disponíveis nos boletins
   const anos = ['2017','2018','2019','2024'];
+  const toneladas = [898.57, 929.27, 1256.03, 1268.87];
 
-  // <--- coloque aqui os valores reais extraídos -->
-  const toneladas = [ 898.57, 929.27, 1256.03, 1268.87 ];
+  function getBarColor() {
+    return document.body.classList.contains('dark') ? '#4dd0e1' : '#00bfa5';
+  }
 
   const ctx = document.getElementById('pescaChart').getContext('2d');
-  new Chart(ctx, {
+  const pescaChart = new Chart(ctx, {
     type: 'bar',
     data: {
       labels: anos,
       datasets: [{
         label: 'Produção (toneladas)',
         data: toneladas,
-        backgroundColor: '#4dd0e1',
+        backgroundColor: getBarColor(),
         borderRadius: 6
       }]
     },
@@ -210,7 +210,16 @@
       }
     }
   });
+
+  // Atualiza automaticamente ao trocar tema
+  const observer = new MutationObserver(() => {
+    pescaChart.data.datasets[0].backgroundColor = getBarColor();
+    pescaChart.update();
+  });
+
+  observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
 </script>
+
 
 <!-- Seção: Oportunidades para Jovens -->
 <section class="secao fade-in">
@@ -415,7 +424,7 @@
         <span>Pesca de Minhoca</span>
       </div>
     </div>
-
+    
           <div class="legend-item" id="cvc">
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/escola.png" alt="cvc" class="legend-icon">
       <div>
