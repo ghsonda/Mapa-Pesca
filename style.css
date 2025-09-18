@@ -606,50 +606,43 @@ body.dark .defeso-grafico .periodo.out.fev::after {
 /* ================================
    Ajustes móveis para gráfico de defeso
 =================================*/
+/* ===== Alinhamento responsivo dos meses (colar no FINAL do style.css) ===== */
+:root{
+  --titulo-w: 180px;   /* largura do título no desktop */
+  --linha-gap: 14px;   /* gap entre título e barra (já usado em .linha) */
+}
+
+/* garante que a regra use a variável */
+.defeso-grafico .linha { gap: var(--linha-gap); }
+.defeso-grafico .titulo { width: var(--titulo-w); }
+
+/* meses: deslocamento calculado = largura do título + gap (alinha exatamente com o início das barras) */
+.meses {
+  display: grid !important;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0;
+  margin-left: calc(var(--titulo-w) + var(--linha-gap));
+  font-size: 0.75rem;
+  color: #555;
+  align-items: center;
+}
+
+.meses span { text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* ---- overrides para mobile: apenas altere a variável e o tamanho das fontes ---- */
+@media (max-width: 920px) {
+  :root { --titulo-w: 140px; } /* exemplo: títulos menores em tablets */
+}
+
 @media (max-width: 600px) {
-  /* Grid com 2 colunas: titulo + conteudo (barra + meses) */
-  .defeso-grafico .linha {
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .defeso-grafico .titulo {
-    width: auto;
-    min-width: 80px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 0.95rem;
-  }
-
-  .defeso-grafico .barra {
-    height: 18px;
-    grid-column: 2; /* garante que fique na 2ª coluna */
-  }
-
-  /* Os meses devem se alinhar exatamente com a coluna das barras */
-  .meses {
-    grid-column: 2; /* força ficar alinhado com a barra */
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 0;
-    margin: 8px 0 0 0; /* sem deslocamento lateral */
-    font-size: 0.65rem;
-  }
-
-  .meses span {
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  :root { --titulo-w: 100px; } /* largura do título no celular */
+  .meses { font-size: 0.65rem; }
+  .defeso-grafico .barra { height: 18px; } /* barra mais baixa no celular */
 }
 
-/* para telas muito pequenas */
+/* opcional para telas muito pequenas */
 @media (max-width: 380px) {
-  .defeso-grafico .linha { grid-template-columns: 90px 1fr; gap:6px; }
-  .defeso-grafico .titulo { font-size: 0.85rem; }
-  .meses { font-size: 0.6rem; gap:2px; }
+  :root { --titulo-w: 88px; }
+  .meses { font-size: 0.58rem; gap: 2px; }
 }
+
