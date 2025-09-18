@@ -602,3 +602,56 @@ body.dark .defeso-grafico .periodo.out.fev::after {
     text-align: center;
   }
 }
+
+/* ================================
+   Ajustes móveis para gráfico de defeso
+=================================*/
+@media (max-width: 600px) {
+  /* Usa grid para manter título + barra alinhados e responsivos */
+  .defeso-grafico .linha {
+    display: grid;
+    grid-template-columns: 110px 1fr; /* 110px para título, resto para a barra */
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Título ocupa só o espaço necessário, corta texto longo com reticências */
+  .defeso-grafico .titulo {
+    width: auto;
+    min-width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.95rem;
+  }
+
+  /* barra menor para caber melhor no celular */
+  .defeso-grafico .barra {
+    height: 18px;
+  }
+
+  /* Remove a margem fixa que desloca os meses no mobile e usa grid para 12 colunas */
+  .meses {
+    margin-left: 0;        
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 4px;
+    font-size: 0.65rem;
+  }
+
+  .meses span {
+    text-align: center;
+    padding: 0 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* para telas muito pequenas */
+@media (max-width: 380px) {
+  .defeso-grafico .linha { grid-template-columns: 90px 1fr; gap:6px; }
+  .defeso-grafico .titulo { font-size: 0.85rem; }
+  .meses { font-size: 0.6rem; gap:2px; }
+}
