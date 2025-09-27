@@ -502,6 +502,15 @@ body.dark .defeso-grafico .periodo.out.fev::after {
   background: #4dd0e1; 
 }
 
+body.dark .footer {
+  background: var(--primary);
+  color: #fff;
+}
+
+body.dark .footer a {
+  color: var(--accent);
+}
+
 /* ================================
    Gráfico de Defeso
 ================================ */
@@ -646,3 +655,37 @@ body.dark .defeso-grafico .periodo.out.fev::after {
   .meses { font-size: 0.58rem; gap: 2px; }
 }
 
+/* ================================
+   Créditos
+=================================*/
+.footer {
+  background: var(--bg-light);
+  color: var(--primary);
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 40px;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.footer a {
+  color: var(--primary-light);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.insta-link {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.insta-link i {
+  margin-right: 6px;
+}
