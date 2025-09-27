@@ -134,19 +134,55 @@ header .subtitle {
   background: #fff;
   padding: 18px;
   border-radius: var(--radius);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   position: absolute;
   left: -300px;
   top: 6px;
   font-family: "Segoe UI", sans-serif;
+
+  max-height: 80vh;
+  overflow-y: auto;
+
+  /* scroll suave */
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
 }
+
+/* Scroll */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 6px;
+}
+
+/* Cabeçalho fixo dentro da legenda */
 .sidebar h3 {
   font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin: 0 0 12px 0;
   color: var(--primary);
   text-align: center;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 8px 0;
+  border-bottom: 2px solid #eaeaea;
+  z-index: 5;
 }
+
+@media (max-width: 920px) {
+  .sidebar {
+    position: relative;
+    max-height: none;   
+    overflow-y: visible;
+  }
+}
+
 .sidebar .legend-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -509,6 +545,10 @@ body.dark .footer {
 
 body.dark .footer a {
   color: var(--accent);
+}
+
+body.dark .sidebar h3 {
+  background: #1e1e1e;
 }
 
 /* ================================
