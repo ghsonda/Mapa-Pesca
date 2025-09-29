@@ -343,7 +343,8 @@ const iconePampu = L.icon({
      <b>Escola CVC</b><br>
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/cvc.png" 
            alt="cvc" 
-           style="width:200px; display:block; margin:10px auto;">
+           style="width:200px; display:block; margin:10px auto;"><br>
+      Escola de Educação Básica Professora Claurinice Vieira Caldeira     
     `);
 
 // Arcelor (Fábrica)
@@ -353,7 +354,8 @@ const iconePampu = L.icon({
      <b>Arcelor</b><br>
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/arcelor.png" 
            alt="arcelor" 
-           style="width:200px; display:block; margin:10px auto;">
+           style="width:200px; display:block; margin:10px auto;"><br>
+      ArcelorMittal Vega São francisco do Sul    
     `);
 
     // Enseada (Linguado)
@@ -503,7 +505,8 @@ const iconePampu = L.icon({
      <b>Porto - SFS</b><br>
       <img src="https://raw.githubusercontent.com/ghsonda/Mapa-Pesca/main/porto.png" 
            alt="porto" 
-           style="width:200px; display:block; margin:10px auto;">
+           style="width:200px; display:block; margin:10px auto;"><br>
+      Porto de São Francisco do Sul     
     `);
 
   // --- Ajustar vista para mostrar todos os marcadores ---
@@ -856,7 +859,6 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
-
   // --- Reaplica invalidateSize quando redimensionam a tela ---
   let resizeTimeout;
   window.addEventListener('resize', () => {
@@ -864,3 +866,14 @@ toggleBtn.addEventListener("click", () => {
     resizeTimeout = setTimeout(() => map.invalidateSize(), 200);
   });
 });
+
+  // --- foco no mapa ao clicar na legenda ---
+document.querySelectorAll('.legend-item').forEach(item => {
+  item.addEventListener('click', () => {
+    document.getElementById('map').scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  });
+});
+
